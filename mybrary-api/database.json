@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Hopper",
+      "password": "anyPassword"
+    },
+    {
+      "id": 2,
+      "username": "Eleven",
+      "password": "strongPassword"
+    },
+    {
+      "username": "JoyceByers",
+      "password": "aPassword",
+      "id": 3
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "goal": "Read 2 Books This Month",
+      "completed": false,
+      "awardId": "",
+      "userId": 1
+    }
+  ],
+  "awards": [
+    {
+      "id": 1,
+      "type": "Goal Completed",
+      "icon": "*"
+    }
+  ],
+  "bookStatus": [
+    {
+      "id": 1,
+      "status": "Complete"
+    },
+    {
+      "id": 2,
+      "status": "Want to Complete"
+    },
+    {
+      "id": 3,
+      "status": "Current"
+    }
+  ]
+}

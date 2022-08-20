@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #D1C9BE;
+    border: 1px whitesmoke outset;
+    height: 45px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.nav {
+    padding-right: 50px;
+}
+
+.library {
+    margin-left: 35px;
+    margin-right: 30px;
+    color: #2D4B4D;
+}
+
+.home {
+    color: #2D4B4D;
+}
+
+.logout {
+    color: #2D4B4D;
+}

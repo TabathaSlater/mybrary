@@ -1,0 +1,52 @@
+.textRegister {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.loginButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+
+}
+
+.containerField {
+    width: 30%;
+    color: #2D4B4D;
+}
+
+.registration {
+    width: 30%;
+    color: #2D4B4D;
+    margin-left: 35%;
+}
+
+.email {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+}
+
