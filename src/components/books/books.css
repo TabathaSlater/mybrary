@@ -1,26 +1,28 @@
-.searchGroup {
+
+.bookContent {
     display: flex;
     flex-direction: row;
-    width: fit-content;
-    align-items: center;
-    margin-left: 15px;
-}
-
-.searchField {
-    margin-right: 10px;
-}
-
-.search-btn {
-    height: max-content;
-    border: .5px solid lightgray;
-    width: max-content;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 5%;
-}
-
-.searchBox {
-    display: flex;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    justify-content: space-around;
+    margin-top: 20px;
+    border: 1px solid darkcyan;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
 
 }
+
+.statistics {
+    border: 1px solid darkcyan;
+    margin: 5px;
+}
+
+.currentBook {
+    border: 1px solid darkcyan;
+    margin: 5px;
+}
+
+.goals {
+    border: 1px solid darkcyan;
+    margin: 5px;
+}
+

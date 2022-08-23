@@ -1,7 +1,6 @@
 import { React, useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Alert, Container, Form, Row, Col, Button } from "react-bootstrap";
+import { Alert, Container, Form, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.css"
 
@@ -27,7 +26,7 @@ export const Login = () => {
             })
           );
 
-          navigate("/");
+          navigate("/home");
         } else {
           <Alert variant="danger">Invalid Login</Alert>;
         }
@@ -37,7 +36,6 @@ export const Login = () => {
   return (
     <main className="container--login">
       <Container className="containerField" >
-
         <Form className="form" onSubmit={handleLogin}>
           <Col>
             <h4 className="card-title text-center fw-normal">Sign In</h4>
@@ -67,6 +65,8 @@ export const Login = () => {
         </div>
         </Form>
       </Container>
+      <div id="image"></div>
+
     </main>
   );
 };

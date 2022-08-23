@@ -1,0 +1,85 @@
+.searchGroup {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.searchField {
+    margin-right: 10px;
+}
+
+.search-btn {
+    height: max-content;
+    border: .5px solid lightgray;
+    width: max-content;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5%;
+    background-color: rgb(236, 235, 235);
+    color: black;
+
+}
+
+.search-btn:hover{
+    background-color:#D1C9BE;
+    color: black;
+
+    }
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif
+}
+
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.sort {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#dropdown-basic {
+    background-color: rgb(236, 235, 235);
+    border-color:rgb(236, 235, 235);
+    border-radius: 5%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    width: max-content;
+
+
+}
+
+#dropdown-basic:hover {
+    background-color:#D1C9BE;
+    border-color: #D1C9BE;
+    color: black;
+    }
+
+.cardBox {
+    display: flex;
+    justify-content: center;
+    height: 50rem;
+    margin: 10px;
+    width: 17%;
+    height: max-content;
+    
+}
+
+#currentBtn {
+  background-color: #2D4B4D;
+  border: 0px;
+}
+
+#currentBtn:hover {
+  background-color: #273e47;
+  border: 0px;
+}

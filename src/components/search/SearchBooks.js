@@ -1,9 +1,12 @@
-import {Form} from 'react-bootstrap'
+import {Form, Button} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './books.css'
+import './search.css'
+import { useNavigate } from 'react-router-dom';
 
-
+//Parent component = SearchBar
 export const SearchBooks = ({handleSearch, fetchMethod}) => {
+    const navigate = useNavigate()
+
     return (
         <>
            <Form
@@ -14,7 +17,11 @@ export const SearchBooks = ({handleSearch, fetchMethod}) => {
               onChange={(e) => {
                 handleSearch(e)
               }} />
-            <button className='search-btn' type='submit'>Search</button>
+            <Button variant="secondary" className='search-btn' type='submit'
+            onClick={() => {
+            // e.preventDefault()  
+            navigate("/search_results")}}
+            >Search</Button>
               
             </Form.Group>
             </Form>     

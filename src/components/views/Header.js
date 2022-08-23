@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBookmark } from "@fortawesome/free-solid-svg-icons";

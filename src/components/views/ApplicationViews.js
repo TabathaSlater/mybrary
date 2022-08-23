@@ -1,29 +1,23 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import { Books } from "../books/Books";
+import { SearchBar } from "../search/SearchBar";
+import { SearchContainer } from "../search/SearchContainer";
 
 export const ApplicationViews = () => {
-  const localMybraryUser = localStorage.getItem("mybrary_user");
-  const mybraryUser = JSON.parse(localMybraryUser);
 
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
+      <Route path="/" element={
           <>
-            <div className="introduction">
-              {""}
-              Nice to see you, {mybraryUser.username}!
-            </div>
-            <Books />
-
+            <Outlet />
           </>
         }>
 
+        <Route path="/home" element={ <Books />} />
 
-
-
-        </Route>
+        <Route path="/search_results" element={<SearchContainer />} />
+        
+      </Route>
     </Routes>
   );
 };

@@ -1,32 +1,25 @@
-import { useState } from "react";
-import { SearchBooks } from "./SearchBooks";
+import { BookGoals } from "./BookGoals"
+import { Statistics } from "./BookStatistics"
+import { CurrentBook } from "./CurentBook"
+import './books.css'
+
 
 export const Books = () => {
-  const [books, setBooks] = useState({
-    books: [],
-    searchField: "",
-  });
-
-  const handleSearch = (e) => {
-    console.log(e.target.value);
-    setBooks({ searchField: e.target.value });
-  };
-
-  const fetchMethod = (e) => {
-    e.preventDefault()
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${books.searchField}`)
-      .then((response) => response.json())
-      .then((bookData) => {
-        console.log(bookData.items)
-        setBooks({books: bookData.items})})
-      }
-
-  return (
+    return (
     <>
-      <div className="searchBox">
-        <SearchBooks handleSearch={handleSearch}
-                     fetchMethod={fetchMethod} />
-      </div>
+    <article className="bookContent">
+        
+        <div className="statistics">
+            <Statistics />
+        </div>
+        <div className="currentBook">
+          <CurrentBook />
+        </div>
+        <div className="goals">
+            <BookGoals />
+        </div>
+
+    </article>
     </>
-  );
-};
+    )
+}

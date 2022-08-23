@@ -10,16 +10,36 @@
     padding-right: 50px;
 }
 
-.library {
-    margin-left: 35px;
-    margin-right: 30px;
-    color: #2D4B4D;
-}
 
 .home {
     color: #2D4B4D;
+    margin-right: 25px;
+}
+
+.library {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #2D4B4D;
+}
+
+.find {
+    margin-right: 25px;
+    margin-left: 25px;
+    color: #2D4B4D;
+
 }
 
 .logout {
+    color: #2D4B4D;
+}
+
+.intro {
+    font-family: 'Libre Franklin', sans-serif;
+    margin-left: 26px;
+    width: 40%;
+    display: flex;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 500;
+    font-size: large;
     color: #2D4B4D;
 }

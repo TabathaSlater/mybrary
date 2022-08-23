@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/esm/Container";
 import { Route, Routes } from "react-router-dom";
 import { Login } from "./components/auth/Login";
 import { Register } from "./components/auth/Register";
