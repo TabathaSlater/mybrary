@@ -35,7 +35,7 @@ export const BookGoals = () => {
       .then((goalList) => {
         setGoal(goalList);
       });
-  }, [goals]);
+  }, []);
 
   return (
     <Container>
@@ -59,29 +59,29 @@ export const BookGoals = () => {
                 }}
               >
                 <div className="goalList">
-                <Checkbox goalProp={goal} setState={setGoal} />
-                <section
-                  style={{
-                    marginLeft: "6px",
-                    textDecoration: "underline",
-                    margin: "10px",
-                  }}
-                >
-                  {goal.goal}
-                </section>
-                <a
-                  onClick={() => {
-                    handleShowEdit();
-                    setGoalId(goal.id);
-                  }}
-                  className="btn-link link-success"
-                  color="secondary"
-                  type="button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Edit
-                </a>
+                  <Checkbox goalProp={goal} setState={setGoal} />
+                  <section
+                    style={{
+                      marginLeft: "6px",
+                      textDecoration: "underline",
+                      margin: "10px",
+                    }}
+                  >
+                    {goal.goal}
+                  </section>
+                  <a
+                    onClick={() => {
+                      handleShowEdit();
+                      setGoalId(goal.id);
+                    }}
+                    className="btn-link link-success"
+                    color="secondary"
+                    type="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Edit
+                  </a>
                 </div>
               </ListGroup>
             );
@@ -117,7 +117,11 @@ export const BookGoals = () => {
       </Modal>
 
       <Modal show={showCompleted}>
-        <CompletedGoals handleCloseCompleted={handleCloseCompleted} />
+        <CompletedGoals
+          handleCloseCompleted={handleCloseCompleted}
+          goals={goals}
+          setGoal={setGoal}
+        />
       </Modal>
     </Container>
   );

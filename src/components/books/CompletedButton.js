@@ -1,6 +1,6 @@
 import {Button} from "react-bootstrap"
 
-export const CompletedButton = ({current}) => {
+export const CompletedButton = ({current, setCurrent}) => {
 
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
@@ -38,6 +38,10 @@ export const CompletedButton = ({current}) => {
         body: JSON.stringify(objectToSendToAPI),
       })
         .then((response) => response.json())
+        .then(() => {
+          setCurrent()
+        })
+
         
     }
 

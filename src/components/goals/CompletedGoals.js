@@ -3,9 +3,8 @@ import { useNavigate } from "react-router";
 import { CompletedCheckbox } from "./CompletedCheckbox";
 import { Button } from "react-bootstrap";
 
-export const CompletedGoals = ({ handleCloseCompleted }) => {
+export const CompletedGoals = ({ handleCloseCompleted, goals, setGoal }) => {
   const [complete, setComplete] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:8088/goals")
@@ -27,7 +26,7 @@ export const CompletedGoals = ({ handleCloseCompleted }) => {
                     className="goalItem"
                     key={`complete--${complete.id}`}
                   >
-                    <CompletedCheckbox goalProp={goal} setState={setComplete} />
+                    <CompletedCheckbox goalProp={goal} setState={setGoal} />
                     <section className="column">
                       <div className="goalName" style={{ marginLeft: "10px" }}>
                         {goal.goal}

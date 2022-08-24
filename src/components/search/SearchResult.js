@@ -39,6 +39,36 @@ export const SearchResult = ({ bookArray, setSort }) => {
   const handleShowAlert = () => setShowAlert(true);
 
   //Create function to post a book to the database
+  const handleAddToWant = (event, book) => {
+    event.preventDefault();
+
+    //Object to be posted
+    const bookToPost = {
+      userId: mybraryUserObject.id,
+      title: book?.volumeInfo?.title,
+      author: book?.volumeInfo?.authors,
+      dateComplete: "",
+      bookCover: book?.volumeInfo?.imageLinks?.smallThumbnail,
+      favorite: "",
+      publisher: book?.volumeInfo?.publisher,
+      publishedDate: book?.volumeInfo?.publishedDate,
+      infoLink: book?.volumeInfo?.infoLink,
+      statusId: 2,
+    };
+
+    return fetch("http://localhost:8088/books", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bookToPost),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        handleShowAlert(true);
+      });
+  };
+  //Create function to post a book to the database
   const handleAddToCurrent = (event, book) => {
     event.preventDefault();
 
@@ -86,6 +116,7 @@ export const SearchResult = ({ bookArray, setSort }) => {
                 key={book?.id}
                 book={book}
                 addToCurrent={handleAddToCurrent}
+                addToWant={handleAddToWant}
               />
             ))}
           </div>
@@ -108,6 +139,7 @@ export const SearchResult = ({ bookArray, setSort }) => {
                 key={book.id}
                 book={book}
                 addToCurrent={handleAddToCurrent}
+                addToWant={handleAddToWant}
               />
             ))}
           </div>
@@ -130,6 +162,7 @@ export const SearchResult = ({ bookArray, setSort }) => {
                 key={book.id}
                 book={book}
                 addToCurrent={handleAddToCurrent}
+                addToWant={handleAddToWant}
               />
             ))}
           </div>

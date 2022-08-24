@@ -24,7 +24,7 @@ export const CurrentBook = () => {
         const book = bookObject[0];
         setCurrent(book);
       });
-  }, [current]);
+  }, []);
 
   if (current) {
     return (
@@ -74,7 +74,8 @@ export const CurrentBook = () => {
                 View all books
               </a>
             </div>
-            <CompletedButton current={current} />
+            <CompletedButton current={current} 
+                             setCurrent={setCurrent}/>
           </div>
         </Card.Body>
       </Card>
