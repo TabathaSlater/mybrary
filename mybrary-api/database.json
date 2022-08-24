@@ -23,6 +23,27 @@
       "completed": false,
       "awardId": "",
       "userId": 1
+    },
+    {
+      "id": 2,
+      "goal": "Visit Library",
+      "completed": false,
+      "awardId": "",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "goal": "Fix the buttons",
+      "awardId": "",
+      "completed": true,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "goal": "Fix the goals",
+      "awardId": "",
+      "completed": true,
+      "id": 6
     }
   ],
   "awards": [
@@ -44,6 +65,38 @@
     {
       "id": 3,
       "status": "Current"
+    }
+  ],
+  "books": [
+    {
+      "title": "Stranger Things: Darkness on the Edge of Town",
+      "author": [
+        "Adam Christopher"
+      ],
+      "bookCover": "http://books.google.com/books/content?id=uD92DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "publishedDate": "2019-05-28",
+      "publisher": "Del Rey",
+      "infoLink": "https://play.google.com/store/books/details?id=uD92DwAAQBAJ&source=gbs_api",
+      "favorite": "",
+      "dateComplete": "24.8.2022.",
+      "statusId": 1,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "title": "Stranger Things: Worlds Turned Upside Down",
+      "author": [
+        "Gina McIntyre"
+      ],
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=KFVeDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "favorite": "",
+      "publisher": "Del Rey",
+      "publishedDate": "2018-10-30",
+      "infoLink": "https://play.google.com/store/books/details?id=KFVeDwAAQBAJ&source=gbs_api",
+      "statusId": 3,
+      "id": 3
     }
   ]
 }

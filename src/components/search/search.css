@@ -83,3 +83,11 @@
   background-color: #273e47;
   border: 0px;
 }
+
+.currentButtons {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+

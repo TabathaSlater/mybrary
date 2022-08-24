@@ -1,0 +1,24 @@
+.goalButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.goalItem {
+    margin: 20px;
+    margin-left: 30px;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.goalList {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-link {
+    margin-top: 10px;
+    justify-self: flex-end;
+}

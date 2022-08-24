@@ -1,7 +1,7 @@
-import { BookGoals } from "./BookGoals"
 import { Statistics } from "./BookStatistics"
 import { CurrentBook } from "./CurentBook"
 import './books.css'
+import { BookGoals } from "../goals/BookGoals"
 
 
 export const Books = () => {
@@ -11,12 +11,12 @@ export const Books = () => {
         
         <div className="statistics">
             <Statistics />
+        <div className="goals">
+            <BookGoals />
+        </div>
         </div>
         <div className="currentBook">
           <CurrentBook />
-        </div>
-        <div className="goals">
-            <BookGoals />
         </div>
 
     </article>

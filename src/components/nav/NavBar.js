@@ -21,7 +21,7 @@ export const NavBar = () => {
             onClick={() => {
                 navigate("/home")
             }} >Home</Nav.Link>
-            <Nav.Link className="library" href="#library">My Library</Nav.Link>
+            <Nav.Link className="library" href="/library">My Library</Nav.Link>
             <Nav.Link className="find" 
             to=""
             onClick={() => {
