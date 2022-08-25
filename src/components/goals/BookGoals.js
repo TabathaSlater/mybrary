@@ -28,6 +28,15 @@ export const BookGoals = () => {
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
+  const deleteGoal = (goal) => {
+    return fetch(`http://localhost:8088/goals/${goal.id}`, {
+      method: "DELETE"
+    })
+      // .then(response => response.json())
+      .then(fetchGoals)
+
+  }
+
   //fetch goals from database
   const fetchGoals = () => {
     fetch(`http://localhost:8088/goals?userId=${mybraryUserObject.id}`)
@@ -89,6 +98,18 @@ export const BookGoals = () => {
                   >
                     Edit
                   </a>
+                  <a
+                    onClick={(e) => {
+                      deleteGoal(goal);
+                    }}
+                    className="btn-link link-danger"
+                    color="secondary"
+                    type="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Delete
+                  </a>
                 </div>
               </ListGroup>
             );
@@ -126,8 +147,8 @@ export const BookGoals = () => {
       <Modal show={showCompleted}>
         <CompletedGoals
           handleCloseCompleted={handleCloseCompleted}
-          goals={goals}
           setGoal={setGoal}
+          fetchGoals={fetchGoals}
         />
       </Modal>
     </Container>

@@ -11,7 +11,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
     <>
       <Card
         className="cardBox"
-        style={{ backgroundColor: "#e8e8e4", border: "0px" }}
+        style={{ backgroundColor: "whitesmoke", border: "0px", height: "45rem" }}
       >
         <Card.Img
           top
@@ -28,21 +28,24 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
           <h5
             style={{
               margin: "1.5%",
-              marginBottom: "3%",
+              marginBottom: "1.5rem",
               letterSpacing: ".75px",
             }}
           >
             {book?.volumeInfo?.title}
           </h5>
+          <div>
           <Card.Text style={{ textDecoration: "underline" }}>
             By {book?.volumeInfo?.authors}
           </Card.Text>
           <Card.Text>
             {book?.volumeInfo?.publisher} {book?.volumeInfo?.publishedDate}
           </Card.Text>
+          </div>
+          <div style={{display: "flex", flexDirection: "column", position: "absolute", bottom: "0", marginBottom: "15px", width: "85%", alignItems: "center"}}>
           <Button
             onClick={handleShow}
-            variant="light"
+            variant="warning"
             style={{ margin: "1.5%" }}
           >
             More info
@@ -65,6 +68,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
           >
             Add to Current
           </Button>
+          </div>
         </Card.Body>
         <Modal show={show}>
           <div

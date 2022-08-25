@@ -4,15 +4,6 @@
     justify-content: space-between;
 }
 
-.goalItem {
-    margin: 20px;
-    margin-left: 30px;
-    text-decoration: underline;
-    display: flex;
-    flex-direction: row;
-    font-weight: 600;
-}
-
 .goalList {
     display: flex;
     flex-direction: row;

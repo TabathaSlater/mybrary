@@ -21,6 +21,7 @@ export const CompletedCheckbox = ({ goalProp, setState }) => {
   return (
     <>
       <input
+      style={{marginLeft: "9px"}}
         className="checkTask"
         type="checkbox"
         defaultChecked={goalProp.completed}

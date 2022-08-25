@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { CompletedCheckbox } from "./CompletedCheckbox";
 import { Button } from "react-bootstrap";
 
-export const CompletedGoals = ({ handleCloseCompleted, goals, setGoal }) => {
+export const CompletedGoals = ({ handleCloseCompleted, fetchGoals, setGoal }) => {
   const [complete, setComplete] = useState([]);
 
   useEffect(() => {
@@ -14,24 +14,47 @@ export const CompletedGoals = ({ handleCloseCompleted, goals, setGoal }) => {
       });
   }, []);
 
+  const deleteGoal = (goal) => {
+    return fetch(`http://localhost:8088/goals/${goal.id}`, {
+      method: "DELETE"
+    })
+      // .then(response => response.json())
+      .then(fetchGoals)
+
+  }
+
   return (
     <>
-      <article className="goalsCompletedList">
+      <article style={{backgroundColor: "#f2e9e4"}}>
         {complete.map((goal) => {
           if (goal.completed === true) {
             return (
               <>
-                <section className="goalItems">
+                <section>
                   <section
                     className="goalItem"
-                    key={`complete--${complete.id}`}
-                  >
-                    <CompletedCheckbox goalProp={goal} setState={setGoal} />
-                    <section className="column">
-                      <div className="goalName" style={{ marginLeft: "10px" }}>
+                    key={`complete--${complete.id}`}>
+                      <h6 style={{display: "flex", justifyContent: "center", margin: "10px", marginTop: "15px", textDecoration: "underline"}}>Completed Goals</h6>
+                    <div style={{display: "flex", flexDirection:"row", margin: "15px"}}>
+                    <CompletedCheckbox goalProp={goal} setState={setGoal}/>
+                      <div style={{ marginLeft: "10px" }}>
                         {goal.goal}
                       </div>
-                    </section>
+                      <div>
+                      <a
+                    onClick={(e) => {
+                      deleteGoal(goal);
+                    }}
+                    className="btnComplete link-danger"
+                    color="secondary"
+                    type="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Delete
+                  </a>
+                  </div>
+                  </div>
                   </section>
                 </section>
               </>
@@ -41,7 +64,7 @@ export const CompletedGoals = ({ handleCloseCompleted, goals, setGoal }) => {
           }
         })}
       </article>
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <div style={{ display: "flex", justifyContent: "flex-end", backgroundColor: "whitesmoke" }}>
         <Button
           variant="secondary"
           style={{ margin: "1.5%", width: "20%" }}
