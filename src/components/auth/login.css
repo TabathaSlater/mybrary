@@ -59,15 +59,6 @@ a {
     margin-top: 0px;
 }
 
-#image {
-    background: url(https://st3.depositphotos.com/2339047/18860/i/600/depositphotos_188606968-stock-photo-old-books-isolated-white-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 275px;
-    width: 50rem;
-    margin-bottom: 0px;
-    margin-left: 35%;
-}
 
 .container--login {
     background-color: white;

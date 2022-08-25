@@ -35,7 +35,6 @@ export const Login = () => {
 
   return (
     <main className="container--login">
-      <div id="image"></div>
       <Container className="containerField">
         <Form className="form" onSubmit={handleLogin}>
           <Col>
