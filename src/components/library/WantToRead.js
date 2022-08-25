@@ -69,7 +69,7 @@ export const WantToRead = ({ books, fetchFunction }) => {
                   <AddToCurrent
                     book={book}
                     setWant={setWant}
-                    fetchFunction={fetchFunction}/>
+                    fetchFunction={fetchFunction} />
                 </div>
               </Card.Body>
             </Card>

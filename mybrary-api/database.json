@@ -28,19 +28,6 @@
       "goal": "Check out the library",
       "completed": false,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "goal": "goal",
-      "completed": true,
-      "id": 3
-    }
-  ],
-  "awards": [
-    {
-      "id": 1,
-      "type": "Goal Completed",
-      "icon": "*"
     }
   ],
   "bookStatus": [

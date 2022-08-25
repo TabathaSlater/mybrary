@@ -42,7 +42,7 @@ export const LibraryCompletedButton = ({
     })
       .then((response) => response.json())
       .then(fetchFunction)
-    
+
   };
 
   return (

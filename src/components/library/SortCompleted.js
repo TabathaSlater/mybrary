@@ -1,6 +1,6 @@
 import Form from "react-bootstrap/Form";
 
-export const SortCompleted = ({setSortedBooks}) => {
+export const SortCompleted = ({ setSortedBooks }) => {
   return (
     <Form.Select
       aria-label="Default select example"

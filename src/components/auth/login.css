@@ -60,14 +60,13 @@ a {
 }
 
 #image {
-    background: url(https://img.freepik.com/free-vector/book-lover-concept-illustration_114360-1467.jpg?w=1380&t=st=1661226519~exp=1661227119~hmac=b4b7eedc54cd2073eb561cdcd7ebe671c79f8eedfee5bd84425d7257bc6e7f1f);
+    background: url(https://st3.depositphotos.com/2339047/18860/i/600/depositphotos_188606968-stock-photo-old-books-isolated-white-background.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 290px;
-    width: 300px;
-    margin-left: 75px;
-
-
+    background-size: cover;
+    height: 275px;
+    width: 50rem;
+    margin-bottom: 0px;
+    margin-left: 35%;
 }
 
 .container--login {

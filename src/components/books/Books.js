@@ -1,25 +1,27 @@
-import { Statistics } from "./BookStatistics"
 import { CurrentBook } from "./CurentBook"
 import './books.css'
 import { BookGoals } from "../goals/BookGoals"
+import { BookStatistics } from "./BookStatistics"
 
 
 export const Books = () => {
     return (
-    <>
-    <article className="bookContent">
-        
-        <div className="statistics">
-            <Statistics />
-        <div className="goals">
-            <BookGoals />
-        </div>
-        </div>
-        <div className="currentBook">
-          <CurrentBook />
-        </div>
+        <>
+            <article className="bookContent">
 
-    </article>
-    </>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div className="statistics" style={{ marginBottom: "100px" }}>
+                        <BookStatistics />
+                    </div>
+                    <div className="goals">
+                        <BookGoals />
+                    </div>
+                </div>
+                <div className="currentBook">
+                    <CurrentBook />
+                </div>
+
+            </article>
+        </>
     )
 }

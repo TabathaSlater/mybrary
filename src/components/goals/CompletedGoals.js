@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import { CompletedCheckbox } from "./CompletedCheckbox";
 import { Button } from "react-bootstrap";
 
 export const CompletedGoals = ({ handleCloseCompleted, fetchGoals, setGoal }) => {
   const [complete, setComplete] = useState([]);
 
+  const fetchCompletedGoals = () => {
+    return fetch("http://localhost:8088/goals")
+    .then((response) => response.json())
+    .then((goalArray) => {
+      setComplete(goalArray);
+    });
+  }
+
   useEffect(() => {
-    fetch("http://localhost:8088/goals")
-      .then((response) => response.json())
-      .then((goalArray) => {
-        setComplete(goalArray);
-      });
+    fetchCompletedGoals()
   }, []);
 
   const deleteGoal = (goal) => {
@@ -19,7 +22,7 @@ export const CompletedGoals = ({ handleCloseCompleted, fetchGoals, setGoal }) =>
       method: "DELETE"
     })
       // .then(response => response.json())
-      .then(fetchGoals)
+      .then(fetchCompletedGoals)
 
   }
 
