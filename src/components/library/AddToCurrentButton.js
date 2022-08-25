@@ -12,7 +12,7 @@ export const AddToCurrent = ({ book, fetchFunction }) => {
     const bookToPost = {
       userId: mybraryUserObject.id,
       title: book.title,
-      author: book.authors,
+      author: book.author,
       dateComplete: "",
       bookCover: book.bookCover,
       favorite: "",

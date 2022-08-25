@@ -29,13 +29,20 @@ export const BookGoals = () => {
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
   //fetch goals from database
-  useEffect(() => {
+  const fetchGoals = () => {
     fetch(`http://localhost:8088/goals?userId=${mybraryUserObject.id}`)
       .then((response) => response.json())
       .then((goalList) => {
         setGoal(goalList);
       });
-  }, []);
+  }
+
+  useEffect(
+  () => {
+    fetchGoals()
+  },
+  []
+  )
 
   return (
     <Container>
@@ -109,11 +116,11 @@ export const BookGoals = () => {
       {/* <Button style={{marginTop: "15px", display: "flex"}} variant="secondary" className="viewCompletedButton"
         onClick={}>View Completed</Button> */}
       <Modal show={show}>
-        <GoalForm handleClose={handleClose} />
+        <GoalForm handleClose={handleClose} fetchGoals={fetchGoals}/>
       </Modal>
 
       <Modal show={showEdit}>
-        <GoalEdit handleCloseEdit={handleCloseEdit} goalId={goalId} />
+        <GoalEdit handleCloseEdit={handleCloseEdit} goalId={goalId} fetchGoals={fetchGoals}/>
       </Modal>
 
       <Modal show={showCompleted}>

@@ -26,17 +26,17 @@ export const Library = () => {
   return (
     <article>
       <div className="currentlyReading">
-        <h2>Currently Reading</h2>
+        <h2 style={{margin: "10px"}}>Currently Reading</h2>
         <Current books={books} setBooks={setBooks} fetchFunction={fetchFunction}/>
       </div>
 
       <div className="wantToRead">
-        <h2>Books I Want To Read</h2>
+        <h2 style={{marginLeft: "10px"}}>Books To Read</h2>
         <WantToRead books={books} setBooks={setBooks} fetchFunction={fetchFunction}/>
       </div>
 
       <div className="completedBooks">
-        <h2>Completed Books</h2>
+        <h2 style={{marginLeft: "10px", marginTop: "26px"}}>Completed Books</h2>
         <Completed books={books} setBooks={setBooks} fetchFunction={fetchFunction} />
       </div>
     </article>

@@ -16,7 +16,7 @@ export const LibraryCompletedButton = ({
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
 
-    let fullDate = `${day}.${month}.${year}.`;
+    let fullDate = `${year}-${month}-${day}`;
 
     // TODO: Create the object to be saved to the API
     const objectToSendToAPI = {
@@ -50,7 +50,7 @@ export const LibraryCompletedButton = ({
       <Button
         style={{ marginTop: "1.5%" }}
         variant="secondary"
-        className="readButton"
+        className="addToRead"
         onClick={(clickEvent) => {
           handleSaveButtonClick();
         }}

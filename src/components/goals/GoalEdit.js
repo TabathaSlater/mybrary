@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Form, Container, Button } from "react-bootstrap";
 
-export const GoalEdit = ({ handleCloseEdit, goalId }) => {
+export const GoalEdit = ({ handleCloseEdit, goalId, fetchGoals }) => {
   const [goal, updateGoal] = useState({
     goal: "",
   });
@@ -29,7 +29,8 @@ export const GoalEdit = ({ handleCloseEdit, goalId }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(goal),
-    }).then((response) => response.json());
+    }).then((response) => response.json())
+    .then(fetchGoals);
   };
 
   return (

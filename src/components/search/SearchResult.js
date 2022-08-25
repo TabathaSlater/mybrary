@@ -13,7 +13,6 @@ export const SearchResult = ({ bookArray, setSort }) => {
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
   useEffect(() => {
-    console.log(taco);
     const newState = { ...bookArray };
     newState.sortBooks = taco;
     setSort(newState);

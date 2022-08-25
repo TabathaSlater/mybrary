@@ -1,12 +1,12 @@
 import Form from "react-bootstrap/Form";
 
-export const SearchSort = ({ setTaco }) => {
+export const SortCompleted = ({setSortedBooks}) => {
   return (
     <Form.Select
       aria-label="Default select example"
       id="dropdown-basic"
       onChange={(e) => {
-        setTaco(e.target.value);
+        setSortedBooks(e.target.value);
       }}
     >
       <option>Sort</option>

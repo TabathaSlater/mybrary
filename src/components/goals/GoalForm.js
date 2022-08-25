@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Form, Container, Button } from "react-bootstrap";
 
-export const GoalForm = ({ handleClose }) => {
+export const GoalForm = ({ handleClose, fetchGoals }) => {
   const [goal, setGoal] = useState({
     goal: "",
     completed: false,
-    awardId: "",
     userId: "",
   });
 
@@ -19,7 +18,6 @@ export const GoalForm = ({ handleClose }) => {
     const ticketToSendToAPI = {
       userId: mybraryUserObject.id,
       goal: goal.goal,
-      awardId: "",
       completed: false,
     };
 
@@ -30,7 +28,8 @@ export const GoalForm = ({ handleClose }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(ticketToSendToAPI),
-    }).then((response) => response.json());
+    }).then((response) => response.json())
+    .then(fetchGoals);
   };
 
   return (
