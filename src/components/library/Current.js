@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Alert, Card } from "react-bootstrap";
 import { LibraryCompletedButton } from "./LibraryCompletedButton";
 
-export const Current = ({ books, setBooks }) => {
+export const Current = ({ books, setBooks, fetchFunction }) => {
   const [current, setCurrent] = useState([]);
   useEffect(() => {
     const filteredBooks = books.filter((book) => book.statusId === 3);
@@ -18,9 +18,10 @@ export const Current = ({ books, setBooks }) => {
               className="Card"
               style={{
                 width: "13rem",
+                height: "35rem",
                 color: "#2D4B4D",
                 border: "0px",
-                margin: "1%",
+                margin: "1%"
               }}
               key={book.id}
             >
@@ -28,7 +29,7 @@ export const Current = ({ books, setBooks }) => {
                 src={book.bookCover}
                 style={{
                   width: "75%",
-                  height: "fit-content",
+                  height: "14rem",
                   marginLeft: "12.5%",
                   marginTop: "6%",
                 }}
@@ -47,9 +48,12 @@ export const Current = ({ books, setBooks }) => {
                   >
                     {book.author}
                   </div>
-                  <div>
-                    {book.publisher} {book.publishedDate}
-                  </div>
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div>
+                      {book.publisher}
+                    </div><div>
+                      {book.publishedDate}
+                    </div></div>
                 </Card.Text>
                 <div
                   style={{
@@ -63,10 +67,7 @@ export const Current = ({ books, setBooks }) => {
                   </a>
                   <LibraryCompletedButton
                     current={book}
-                    setCurrent={setCurrent}
-                    setBooks={setBooks}
-                    books={books}
-                  />
+                    fetchFunction={fetchFunction} />
                 </div>
               </Card.Body>
             </Card>

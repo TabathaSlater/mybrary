@@ -2,10 +2,11 @@ import { Button } from "react-bootstrap";
 
 export const LibraryCompletedButton = ({
   current,
-  setCurrent
+  fetchFunction
 }) => {
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
+
 
   const handleSaveButtonClick = () => {
     // event.preventDefault();
@@ -40,13 +41,14 @@ export const LibraryCompletedButton = ({
       body: JSON.stringify(objectToSendToAPI),
     })
       .then((response) => response.json())
+      .then(fetchFunction)
     
   };
 
   return (
     <>
       <Button
-        style={{ marginTop: "15px" }}
+        style={{ marginTop: "1.5%" }}
         variant="secondary"
         className="readButton"
         onClick={(clickEvent) => {

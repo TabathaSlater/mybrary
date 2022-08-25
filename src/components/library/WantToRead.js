@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Alert, Card } from "react-bootstrap";
 import { AddToCurrent } from "./AddToCurrentButton";
 
-export const WantToRead = ({ books, setBooks }) => {
+export const WantToRead = ({ books, fetchFunction }) => {
   const [want, setWant] = useState([]);
 
   useEffect(() => {
@@ -19,9 +19,10 @@ export const WantToRead = ({ books, setBooks }) => {
               className="Card"
               style={{
                 width: "13rem",
+                height: "35rem",
                 color: "#2D4B4D",
                 border: "0px",
-                margin: "1%",
+                margin: "1%"
               }}
               key={book.id}
             >
@@ -29,7 +30,7 @@ export const WantToRead = ({ books, setBooks }) => {
                 src={book.bookCover}
                 style={{
                   width: "75%",
-                  height: "fit-content",
+                  height: "14rem",
                   marginLeft: "12.5%",
                   marginTop: "6%",
                 }}
@@ -48,9 +49,12 @@ export const WantToRead = ({ books, setBooks }) => {
                   >
                     {book.author}
                   </div>
-                  <div>
-                    {book.publisher} {book.publishedDate}
-                  </div>
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div>
+                      {book.publisher}
+                    </div><div>
+                      {book.publishedDate}
+                    </div></div>
                 </Card.Text>
                 <div
                   style={{
@@ -64,10 +68,8 @@ export const WantToRead = ({ books, setBooks }) => {
                   </a>
                   <AddToCurrent
                     book={book}
-                    setBooks={setBooks}
-                    books={books}
                     setWant={setWant}
-                  />
+                    fetchFunction={fetchFunction}/>
                 </div>
               </Card.Body>
             </Card>

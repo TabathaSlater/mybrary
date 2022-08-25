@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react";
-import { Container, Alert, Card } from "react-bootstrap";
+import { Container, Alert, Card, Button } from "react-bootstrap";
 
-export const Completed = ({ books }) => {
+export const Completed = ({ books, fetchFunction }) => {
   const [completed, setCompleted] = useState([]);
 
   useEffect(() => {
     const filteredBooks = books.filter((book) => book.statusId === 1);
     setCompleted(filteredBooks);
   }, [books]);
+
+  const deleteBook = (book) => {
+    return fetch(`http://localhost:8088/books/${book.id}`, {
+      method: "DELETE"
+    })
+      .then(response => response.json())
+      .then(fetchFunction)
+
+  }
 
   if (completed.length > 0) {
     return (
@@ -18,9 +27,10 @@ export const Completed = ({ books }) => {
               className="Card"
               style={{
                 width: "13rem",
+                height: "35rem",
                 color: "#2D4B4D",
                 border: "0px",
-                margin: "1%",
+                margin: "1%"
               }}
               key={book.id}
             >
@@ -28,7 +38,7 @@ export const Completed = ({ books }) => {
                 src={book.bookCover}
                 style={{
                   width: "75%",
-                  height: "fit-content",
+                  height: "14rem",
                   marginLeft: "12.5%",
                   marginTop: "6%",
                 }}
@@ -47,9 +57,12 @@ export const Completed = ({ books }) => {
                   >
                     {book.author}
                   </div>
-                  <div>
-                    {book.publisher} {book.publishedDate}
-                  </div>
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div>
+                      {book.publisher}
+                    </div><div>
+                      {book.publishedDate}
+                    </div></div>
                 </Card.Text>
                 <div
                   style={{
@@ -61,6 +74,11 @@ export const Completed = ({ books }) => {
                   <a href={book.infoLink} className="link-success info">
                     More Info
                   </a>
+                  <Button variant="danger" style={{marginTop: "1.5%"}}
+                    onClick={(e) => {
+                      deleteBook(book)
+                    }}
+                  >Delete</Button>
                 </div>
               </Card.Body>
             </Card>

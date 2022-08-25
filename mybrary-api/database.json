@@ -16,36 +16,7 @@
       "id": 3
     }
   ],
-  "goals": [
-    {
-      "id": 1,
-      "goal": "Read 2 Books ",
-      "completed": false,
-      "awardId": "",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "goal": "Visit Library",
-      "completed": false,
-      "awardId": "",
-      "userId": 1
-    },
-    {
-      "userId": 1,
-      "goal": "Fix the buttons",
-      "awardId": "",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "goal": "Fix the goals",
-      "awardId": "",
-      "completed": false,
-      "id": 6
-    }
-  ],
+  "goals": [],
   "awards": [
     {
       "id": 1,
@@ -93,7 +64,49 @@
       "id": 3
     },
     {
+      "userId": 1,
+      "title": "Stranger Things: The Bully (Graphic Novel)",
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=-gflDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "favorite": "",
+      "publisher": "Dark Horse Comics",
+      "publishedDate": "2020-09-01",
+      "infoLink": "https://play.google.com/store/books/details?id=-gflDwAAQBAJ&source=gbs_api",
+      "statusId": 2,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "Stranger Things: Science Camp (Graphic Novel)",
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=gbn8DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "favorite": "",
+      "publisher": "Dark Horse Comics",
+      "publishedDate": "2021-05-04",
+      "infoLink": "https://play.google.com/store/books/details?id=gbn8DwAAQBAJ&source=gbs_api",
+      "statusId": 3,
+      "id": 7
+    },
+    {
+      "title": "Stranger Things: The Ultimate Pop-Up Book",
+      "author": [
+        "Simon Arizpe"
+      ],
+      "bookCover": "http://books.google.com/books/content?id=LP0rzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "publishedDate": "2022-07-05",
+      "publisher": "Insight Editions",
+      "infoLink": "http://books.google.com/books?id=LP0rzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
+      "favorite": "",
+      "dateComplete": "24.8.2022.",
+      "statusId": 1,
+      "userId": 1,
+      "id": 8
+    },
+    {
       "title": "Stranger Things: SIX (Graphic Novel)",
+      "author": [
+        "Jody Houser"
+      ],
       "bookCover": "http://books.google.com/books/content?id=KYiODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "publishedDate": "2019-11-26",
       "publisher": "Dark Horse Comics",
@@ -102,64 +115,7 @@
       "dateComplete": "24.8.2022.",
       "statusId": 1,
       "userId": 1,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "title": "Stranger Things: The Bully (Graphic Novel)",
-      "author": [
-        "Greg Pak"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=-gflDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
-      "publishedDate": "2020-09-01",
-      "infoLink": "https://play.google.com/store/books/details?id=-gflDwAAQBAJ&source=gbs_api",
-      "statusId": 3,
-      "id": 5
-    },
-    {
-      "title": "Stranger Things: Rebel Robin",
-      "bookCover": "http://books.google.com/books/content?id=8tMwEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2021",
-      "publisher": "Random House Books for Young Readers",
-      "infoLink": "http://books.google.com/books?id=8tMwEAAAQBAJ&dq=stranger+things&hl=&source=gbs_api",
-      "favorite": "",
-      "dateComplete": "24.8.2022.",
-      "statusId": 1,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "title": "Stranger Things: Science Camp (Graphic Novel)",
-      "author": [
-        "Jody Houser"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=gbn8DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
-      "publishedDate": "2021-05-04",
-      "infoLink": "https://play.google.com/store/books/details?id=gbn8DwAAQBAJ&source=gbs_api",
-      "statusId": 2,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "title": "Stranger Things: The Ultimate Pop-Up Book",
-      "author": [
-        "Simon Arizpe"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=LP0rzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "favorite": "",
-      "publisher": "Insight Editions",
-      "publishedDate": "2022-07-05",
-      "infoLink": "http://books.google.com/books?id=LP0rzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
-      "statusId": 3,
-      "id": 8
+      "id": 9
     }
   ]
 }

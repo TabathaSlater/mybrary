@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 
-export const AddToCurrent = ({ book, want, setWant }) => {
+export const AddToCurrent = ({ book, fetchFunction }) => {
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
@@ -29,9 +29,7 @@ export const AddToCurrent = ({ book, want, setWant }) => {
       },
       body: JSON.stringify(bookToPost),
     }).then((response) => response.json())
-    .then(() => {
-      setWant(book)
-    });
+    .then(fetchFunction);
   };
 
   return (
