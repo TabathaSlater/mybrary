@@ -64,7 +64,7 @@ export const Completed = ({ books, fetchFunction }) => {
                   color: "#2D4B4D",
                   border: "0px",
                   margin: "1%",
-                  marginTop: "20px"
+                  marginTop: "25px"
                 }}
                 key={book.id}>
                 <Card.Img
@@ -132,7 +132,8 @@ export const Completed = ({ books, fetchFunction }) => {
               height: "35rem",
               color: "#2D4B4D",
               border: "0px",
-              margin: "1%"
+              margin: "1%",
+              marginTop: "25px"
             }}
             key={book.id}>
             <Card.Img
@@ -183,7 +184,7 @@ export const Completed = ({ books, fetchFunction }) => {
       })}
       </div>
     </article>
-    )} else if (!completed.sortBooks) {
+    )} else if (!completed.sortBooks || completed.sortBooks == "Sort") {
       return (
         <article>
           <div style={{marginLeft: "15px", marginTop: "15px"}}>
@@ -200,7 +201,7 @@ export const Completed = ({ books, fetchFunction }) => {
                   color: "#2D4B4D",
                   border: "0px",
                   margin: "1%",
-                  marginTop: "20px"}}
+                  marginTop: "25px"}}
                 key={book.id}
               >
                 <Card.Img

@@ -9,7 +9,7 @@ export const SortCompleted = ({ setSortedBooks }) => {
         setSortedBooks(e.target.value);
       }}
     >
-      <option>Sort</option>
+      <option value="Sort">Date Completed</option>
       <option value="Newest">Newest</option>
       <option value="Oldest">Oldest</option>
     </Form.Select>

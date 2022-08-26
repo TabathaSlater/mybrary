@@ -61,18 +61,18 @@
       "id": 1
     },
     {
-      "userId": 1,
       "title": "Stranger Things: Zombie Boys (Graphic Novel)",
       "author": [
         "Greg Pak"
       ],
-      "dateComplete": "",
       "bookCover": "http://books.google.com/books/content?id=9s_GDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
       "publishedDate": "2020-01-21",
+      "publisher": "Dark Horse Comics",
       "infoLink": "http://books.google.com/books?id=9s_GDwAAQBAJ&dq=stranger+things&hl=&source=gbs_api",
-      "statusId": 3,
+      "favorite": "",
+      "dateComplete": "2022-8-25",
+      "statusId": 1,
+      "userId": 1,
       "id": 2
     },
     {
