@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Alert, Container, Form, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.css";
-import { Source } from "../source/Source";
 
 export const Login = () => {
   const [password, setPassword] = useState("");
@@ -77,7 +76,6 @@ export const Login = () => {
           </div>
         </Form>
       </Container>
-      <Source />
     </main>
   );
 };

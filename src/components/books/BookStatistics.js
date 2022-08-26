@@ -29,6 +29,7 @@ export const BookStatistics = () => {
     const totalRead = readBooks.length
 
     const averageToRound = readBooks.length / 12
+    // const averageToRound = readBooks.length / (date of first completed book - current date)
     const averagePerMonth = averageToRound.toFixed(1)
 
 

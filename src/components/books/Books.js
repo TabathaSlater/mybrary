@@ -7,7 +7,7 @@ import { BookStatistics } from "./BookStatistics"
 export const Books = () => {
     return (
         <>
-            <article className="bookContent">
+            <article className="bookContent" style={{marginTop: "5px"}}>
 
                 <div style={{ display: "flex", flexDirection: "column" }}>
                     <div className="statistics" style={{ marginBottom: "100px" }}>
