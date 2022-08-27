@@ -17,16 +17,12 @@ export const Completed = ({ books, fetchFunction }) => {
   }, [sortedBooks]);
 
   const sortNew = [...completed.completed].sort((objA, objB) => {
-    objA = objA.dateComplete.split('-')
-    objB = objB.dateComplete.split('-')
-    return(objB[2] - objA[2] || objB[1] - objA[1] || objB[0] - objA[0])
+    return parseInt(objB.dateTime - objA.dateTime)
   });
   console.log(sortNew)
 
   const sortOld = [...completed.completed].sort((objA, objB) => {
-    objA = objA.dateComplete.split('-')
-    objB = objB.dateComplete.split('-')
-    return(objA[2] - objB[2] || objA[1] - objB[1] || objA[0] - objB[0])
+    return parseInt(objA.dateTime - objB.dateTime)
   });
   console.log(sortOld)
 
@@ -63,7 +59,7 @@ export const Completed = ({ books, fetchFunction }) => {
                   height: "35rem",
                   color: "#2D4B4D",
                   border: "0px",
-                  margin: "1%",
+                  // margin: "1%",
                   marginTop: "25px"
                 }}
                 key={book.id}>
@@ -78,7 +74,7 @@ export const Completed = ({ books, fetchFunction }) => {
                 <Card.Body style={{ marginTop: "0px" }}>
                   <h5
                     className="title"
-                    style={{ marginTop: "1.5%", marginBottom: "3%" }}>
+                    style={{ marginTop: "1.5%"}}>
                     {book.title}
                   </h5>
                   <Card.Text>
@@ -100,9 +96,11 @@ export const Completed = ({ books, fetchFunction }) => {
                       justifyContent: "flex-start",
                       flexDirection: "column",
                     }}>
+                    <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
                     <a href={book.infoLink} className="link-success info">
                       More Info
                     </a>
+                    </div>
                     <Button variant="danger" style={{ marginTop: "1.5%" }}
                       onClick={(e) => {
                         deleteBook(book)
@@ -169,9 +167,11 @@ export const Completed = ({ books, fetchFunction }) => {
                   justifyContent: "flex-start",
                   flexDirection: "column",
                 }}>
+                <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
                 <a href={book.infoLink} className="link-success info">
                   More Info
                 </a>
+                </div>
                 <Button variant="danger" style={{ marginTop: "1.5%" }}
                   onClick={(e) => {
                     deleteBook(book)
@@ -239,11 +239,12 @@ export const Completed = ({ books, fetchFunction }) => {
                       display: "flex",
                       justifyContent: "flex-start",
                       flexDirection: "column",
-                    }}
-                  >
+                    }}>
+                    <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
                     <a href={book.infoLink} className="link-success info">
                       More Info
                     </a>
+                    </div>
                     <Button variant="danger" style={{ marginTop: "1.5%" }}
                       onClick={(e) => {
                         deleteBook(book)

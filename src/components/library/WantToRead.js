@@ -22,7 +22,7 @@ export const WantToRead = ({ books, fetchFunction }) => {
                 height: "35rem",
                 color: "#2D4B4D",
                 border: "0px",
-                margin: "1%"
+                // margin: "1%"
               }}
               key={book.id}
             >
@@ -38,7 +38,7 @@ export const WantToRead = ({ books, fetchFunction }) => {
               <Card.Body style={{ marginTop: "0px" }}>
                 <h5
                   className="title"
-                  style={{ marginTop: "1.5%", marginBottom: "3%" }}
+                  style={{ marginTop: "1.5%"}}
                 >
                   {book.title}
                 </h5>
@@ -61,11 +61,12 @@ export const WantToRead = ({ books, fetchFunction }) => {
                     display: "flex",
                     justifyContent: "flex-start",
                     flexDirection: "column",
-                  }}
-                >
-                  <a href={book.infoLink} className="link-success info">
+                  }}>
+                  <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
+                  <a href={book.infoLink} className="link-success">
                     More Info
                   </a>
+                  </div>
                   <AddToCurrent
                     book={book}
                     setWant={setWant}

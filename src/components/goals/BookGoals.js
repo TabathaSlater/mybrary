@@ -54,10 +54,10 @@ export const BookGoals = () => {
   )
 
   return (
-    <Container>
+    <Container style={{borderTop: "solid 5px whitesmoke", paddingTop: "50px"}}>
       <h3
         className="GoalHeading"
-        style={{ display: "flex", justifyContent: "center", color: "#2D4B4D" }}
+        style={{ display: "flex", justifyContent: "center"}}
       >
         Reading Goals
       </h3>

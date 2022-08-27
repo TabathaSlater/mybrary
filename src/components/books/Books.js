@@ -2,26 +2,26 @@ import { CurrentBook } from "./CurentBook"
 import './books.css'
 import { BookGoals } from "../goals/BookGoals"
 import { BookStatistics } from "./BookStatistics"
+import { RandomBook } from "./RandomBook"
 
 
 export const Books = () => {
     return (
-        <>
-            <article className="bookContent" style={{marginTop: "5px"}}>
+        <section style={{marginTop: "5px", display: "flex", justifyContent: "center", justifyContent: "space-evenly"}}>
 
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div className="statistics" style={{ marginBottom: "100px" }}>
+                <div className="currentBook" style={{borderRight: "solid 5px whitesmoke", paddingRight: "175px", marginLeft: '10%'}}>
+                    <CurrentBook />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", marginLeft: "5%", marginRight: '5%', width:'33%' }}>
+                    <div className="statistics" style={{ marginBottom: "50px" }}>
                         <BookStatistics />
                     </div>
                     <div className="goals">
                         <BookGoals />
                     </div>
                 </div>
-                <div className="currentBook">
-                    <CurrentBook />
-                </div>
+                <div style={{borderLeft: "solid 5px whitesmoke",  marginTop: '50px'}}><RandomBook/></div>
 
-            </article>
-        </>
+        </section>
     )
 }

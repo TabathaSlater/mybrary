@@ -24,19 +24,19 @@ export const Library = () => {
 
 
   return (
-    <article>
-      <div className="currentlyReading">
+    <article style={{marginLeft: '40px'}}>
+      <div className="currentlyReading" style={{borderBottom: "solid 5px whitesmoke"}}>
         <h2 style={{margin: "10px"}}>Currently Reading</h2>
         <Current books={books} setBooks={setBooks} fetchFunction={fetchFunction}/>
       </div>
 
-      <div className="wantToRead">
+      <div className="wantToRead" style={{borderBottom: "solid 5px whitesmoke", marginTop: "20px"}}>
         <h2 style={{marginLeft: "10px"}}>Books To Read</h2>
         <WantToRead books={books} setBooks={setBooks} fetchFunction={fetchFunction}/>
       </div>
 
-      <div className="completedBooks">
-        <h2 style={{marginLeft: "10px", marginTop: "26px"}}>Completed Books</h2>
+      <div className="completedBooks" style={{marginTop: "20px"}}>
+        <h2 style={{marginLeft: "10px", marginTop: "5px"}}>Completed Books</h2>
         <Completed books={books} setBooks={setBooks} fetchFunction={fetchFunction} />
       </div>
     </article>

@@ -1,7 +1,7 @@
 # Mybrary
 
 Mybrary is a personal reading tool that helps you manage your literary goals and accomplishments by providing book tracking, book searching, and reading statistics.
-Mybrary utilizes Google Books API to return relevant information about your favorite books, and New York Times Bestsellers API to recommend books you might like.
+Mybrary utilizes Google Books API to return relevant information about your favorite books, and a combination of Google Books API and the New York Times Bestsellers API to recommend books you might like.
 
 Styling utilizes a mixture of react-bootstrap and css.
 

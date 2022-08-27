@@ -9,6 +9,8 @@ export const SearchBooks = ({ handleSearch, fetchMethod }) => {
 
   return (
     <>
+    <h4 style={{display: "flex", position: "absolute", left: "0", margin: "20px", marginLeft: "30px" }}>Find Books</h4>
+    <div style={{margin: "40px"}}>
       <Form onSubmit={fetchMethod}>
         <Form.Group controlId="formSearch" className="searchGroup">
           <Form.Control
@@ -32,6 +34,7 @@ export const SearchBooks = ({ handleSearch, fetchMethod }) => {
           </Button>
         </Form.Group>
       </Form>
+      </div>
     </>
   );
 };

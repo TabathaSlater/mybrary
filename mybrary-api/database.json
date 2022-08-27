@@ -28,6 +28,12 @@
       "goal": "Check out the library",
       "completed": false,
       "id": 2
+    },
+    {
+      "userId": 1,
+      "goal": "Read 2 books this month",
+      "completed": false,
+      "id": 3
     }
   ],
   "bookStatus": [
@@ -58,83 +64,69 @@
       "publishedDate": "2018-10-30",
       "infoLink": "https://play.google.com/store/books/details?id=KFVeDwAAQBAJ&source=gbs_api",
       "statusId": 3,
-      "id": 1
-    },
-    {
-      "title": "Stranger Things: Zombie Boys (Graphic Novel)",
-      "author": [
-        "Greg Pak"
-      ],
-      "bookCover": "http://books.google.com/books/content?id=9s_GDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2020-01-21",
-      "publisher": "Dark Horse Comics",
-      "infoLink": "http://books.google.com/books?id=9s_GDwAAQBAJ&dq=stranger+things&hl=&source=gbs_api",
-      "favorite": "",
-      "dateComplete": "2022-8-25",
-      "statusId": 1,
-      "userId": 1,
       "id": 2
     },
     {
-      "userId": 1,
       "title": "Stranger Things: The Bully (Graphic Novel)",
       "author": [
         "Greg Pak"
       ],
-      "dateComplete": "",
       "bookCover": "http://books.google.com/books/content?id=-gflDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
       "publishedDate": "2020-09-01",
+      "publisher": "Dark Horse Comics",
       "infoLink": "https://play.google.com/store/books/details?id=-gflDwAAQBAJ&source=gbs_api",
-      "statusId": 2,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "Stranger Things: Science Camp (Graphic Novel)",
-      "author": [
-        "Jody Houser"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=gbn8DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "favorite": "",
-      "publisher": "Dark Horse Comics",
-      "publishedDate": "2021-05-04",
-      "infoLink": "https://play.google.com/store/books/details?id=gbn8DwAAQBAJ&source=gbs_api",
-      "statusId": 2,
-      "id": 4
-    },
-    {
-      "title": "Stranger Things: Erica the Great (Graphic Novel)",
-      "author": [
-        "Greg Pak",
-        "Danny Lore"
-      ],
-      "bookCover": "http://books.google.com/books/content?id=jO9KEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2022-01-25",
-      "publisher": "Dark Horse Comics",
-      "infoLink": "http://books.google.com/books?id=jO9KEAAAQBAJ&dq=stranger+things&hl=&source=gbs_api",
-      "favorite": "",
-      "dateComplete": "2022-8-25",
+      "dateComplete": "2022-8-26",
+      "dateTime": 1661539855386,
       "statusId": 1,
       "userId": 1,
       "id": 5
     },
     {
+      "title": "Stranger Things: Darkness on the Edge of Town",
+      "author": [
+        "Adam Christopher"
+      ],
+      "bookCover": "http://books.google.com/books/content?id=uD92DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "publishedDate": "2019-05-28",
+      "publisher": "Del Rey",
+      "infoLink": "https://play.google.com/store/books/details?id=uD92DwAAQBAJ&source=gbs_api",
+      "favorite": "",
+      "dateComplete": "2022-8-25",
+      "dateTime": 1661556296386,
+      "statusId": 1,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "userId": 1,
       "title": "Stranger Things: SIX (Graphic Novel)",
       "author": [
         "Jody Houser"
       ],
+      "dateComplete": "",
       "bookCover": "http://books.google.com/books/content?id=KYiODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2019-11-26",
-      "publisher": "Dark Horse Comics",
-      "infoLink": "https://play.google.com/store/books/details?id=KYiODwAAQBAJ&source=gbs_api",
       "favorite": "",
-      "dateComplete": "2021-7-25",
-      "statusId": 1,
+      "publisher": "Dark Horse Comics",
+      "publishedDate": "2019-11-26",
+      "infoLink": "https://play.google.com/store/books/details?id=KYiODwAAQBAJ&source=gbs_api",
+      "statusId": 2,
+      "id": 7
+    },
+    {
       "userId": 1,
-      "id": 6
+      "title": "Stranger Things: The Ultimate Pop-Up Book",
+      "author": [
+        "Simon Arizpe"
+      ],
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=LP0rzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "favorite": "",
+      "publisher": "Insight Editions",
+      "publishedDate": "2022-07-05",
+      "infoLink": "http://books.google.com/books?id=LP0rzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
+      "statusId": 3,
+      "id": 8
     }
   ]
 }

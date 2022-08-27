@@ -15,8 +15,10 @@ export const LibraryCompletedButton = ({
     let day = date.getDate();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
+    let time = date.getTime()
 
     let fullDate = `${year}-${month}-${day}`;
+    let dateTime = time
 
     // TODO: Create the object to be saved to the API
     const objectToSendToAPI = {
@@ -28,6 +30,7 @@ export const LibraryCompletedButton = ({
       infoLink: current.infoLink,
       favorite: "",
       dateComplete: fullDate,
+      dateTime: dateTime,
       statusId: 1,
       userId: mybraryUserObject.id,
     };

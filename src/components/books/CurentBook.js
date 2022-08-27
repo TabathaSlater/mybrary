@@ -30,16 +30,13 @@ export const CurrentBook = () => {
     return (
       <Card
         className="wholeCurrentCard"
-        style={{ width: "18rem", color: "#2D4B4D", border: "0px" }}
-      >
+        style={{ width: "18rem", color: "#2D4B4D", border: "0px", marginTop: "30px" }}>
         <h3
           className="currentHeading"
           style={{
             display: "flex",
-            justifyContent: "center",
-            color: "#2D4B4D",
-          }}
-        >
+            justifyContent: "center"
+          }}>
           Currently Reading
         </h3>
         <Card.Img
@@ -49,8 +46,7 @@ export const CurrentBook = () => {
             height: "fit-content",
             marginLeft: "12.5%",
             marginTop: "6%",
-          }}
-        />
+          }}/>
         <Card.Body style={{ marginTop: "0px" }}>
           <h5 className="title">{current.title}</h5>
           <Card.Text>
@@ -74,8 +70,8 @@ export const CurrentBook = () => {
                 View all books
               </a>
             </div>
-            <CompletedButton current={current} 
-                             setCurrent={setCurrent}/>
+            <CompletedButton current={current}
+              setCurrent={setCurrent} />
           </div>
         </Card.Body>
       </Card>
