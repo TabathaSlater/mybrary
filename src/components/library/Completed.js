@@ -59,7 +59,7 @@ export const Completed = ({ books, fetchFunction }) => {
                   height: "35rem",
                   color: "#2D4B4D",
                   border: "0px",
-                  // margin: "1%",
+                  margin: "1%",
                   marginTop: "25px"
                 }}
                 key={book.id}>
@@ -97,7 +97,9 @@ export const Completed = ({ books, fetchFunction }) => {
                       flexDirection: "column",
                     }}>
                     <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                    <a href={book.infoLink} className="link-success info">
+                    <a href={book.infoLink} 
+                    target="_blank"
+                    className="link-success info">
                       More Info
                     </a>
                     </div>
@@ -168,7 +170,9 @@ export const Completed = ({ books, fetchFunction }) => {
                   flexDirection: "column",
                 }}>
                 <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                <a href={book.infoLink} className="link-success info">
+                <a href={book.infoLink} 
+                target='_blank'
+                className="link-success info">
                   More Info
                 </a>
                 </div>
@@ -241,7 +245,9 @@ export const Completed = ({ books, fetchFunction }) => {
                       flexDirection: "column",
                     }}>
                     <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                    <a href={book.infoLink} className="link-success info">
+                    <a href={book.infoLink} 
+                    target='_blank'
+                    className="link-success info">
                       More Info
                     </a>
                     </div>

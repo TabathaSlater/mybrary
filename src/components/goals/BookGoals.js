@@ -52,12 +52,12 @@ export const BookGoals = () => {
   },
   []
   )
-
+if (goals.length > 0) {
   return (
     <Container style={{borderTop: "solid 5px whitesmoke", paddingTop: "50px"}}>
       <h3
         className="GoalHeading"
-        style={{ display: "flex", justifyContent: "center"}}
+        style={{ display: "flex", justifyContent: "center", marginBottom: '35px'}}
       >
         Reading Goals
       </h3>
@@ -152,5 +152,32 @@ export const BookGoals = () => {
         />
       </Modal>
     </Container>
-  );
-};
+  )} else {
+     return (
+      <section>
+      <h3
+        style={{ display: "flex", justifyItems: "center"}}
+      >
+        Reading Goals
+      </h3>
+      <div>
+        Get started by adding some goals!
+
+        <Button
+          style={{ marginTop: "15px", display: "flex" }}
+          variant="success"
+          className="addGoalButton"
+          onClick={handleShow}>
+          Add Goal
+        </Button>
+
+        <Modal show={show}>
+        <GoalForm handleClose={handleClose} fetchGoals={fetchGoals}/>
+      </Modal>
+
+      </div>
+      </section>
+     )
+
+  }
+}

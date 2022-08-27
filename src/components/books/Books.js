@@ -7,7 +7,7 @@ import { RandomBook } from "./RandomBook"
 
 export const Books = () => {
     return (
-        <section style={{marginTop: "5px", display: "flex", justifyContent: "center", justifyContent: "space-evenly"}}>
+        <section style={{marginTop: "45px", display: "flex", justifyContent: "center", justifyContent: "space-evenly"}}>
 
                 <div className="currentBook" style={{borderRight: "solid 5px whitesmoke", paddingRight: "175px", marginLeft: '10%'}}>
                     <CurrentBook />
@@ -20,7 +20,7 @@ export const Books = () => {
                         <BookGoals />
                     </div>
                 </div>
-                <div style={{borderLeft: "solid 5px whitesmoke",  marginTop: '50px'}}><RandomBook/></div>
+                <div style={{borderLeft: "solid 5px whitesmoke",  marginTop: '35px'}}><RandomBook/></div>
 
         </section>
     )

@@ -59,7 +59,7 @@ export const CurrentBook = () => {
           </Card.Text>
           <div className="currentButtons">
             <div className="linkInfo">
-              <a href={current.infoLink} className="link-success info">
+              <a href={current.infoLink} target="_blank" className="link-success info">
                 More Info
               </a>
               <a
@@ -78,7 +78,7 @@ export const CurrentBook = () => {
     );
   } else {
     return (
-      <Container>
+      <section style={{marginTop: '175px', width: "18rem", color: "#2D4B4D", border: "0px"}}>
         <Alert variant="secondary">
           <Alert.Heading>You Have No Current Books</Alert.Heading>
           <p>
@@ -97,7 +97,7 @@ export const CurrentBook = () => {
             </a>
           </p>
         </Alert>
-      </Container>
+      </section>
     );
   }
 };

@@ -63,7 +63,9 @@ export const WantToRead = ({ books, fetchFunction }) => {
                     flexDirection: "column",
                   }}>
                   <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                  <a href={book.infoLink} className="link-success">
+                  <a href={book.infoLink} 
+                  target='_blank'
+                  className="link-success">
                     More Info
                   </a>
                   </div>

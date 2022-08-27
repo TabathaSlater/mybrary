@@ -12,8 +12,12 @@ export const BookStatistics = () => {
     const [totalBooks, setTotalBooks] = useState([])
     const [totalRead, setTotalRead] = useState(0)
     const [booksReadAvg, setBooksRead] = useState(0)
+
+    const localMybraryUser = localStorage.getItem("mybrary_user");
+    const mybraryUserObject = JSON.parse(localMybraryUser);
+
     const fetchBookData = () => {
-        return fetch('http://localhost:8088/books')
+        return fetch(`http://localhost:8088/books?userId=${mybraryUserObject.id}`)
             .then(response => response.json())
             .then((books) => {
                 let fullDate = new Date().getTime();

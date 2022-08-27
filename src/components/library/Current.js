@@ -62,7 +62,9 @@ export const Current = ({ books, setBooks, fetchFunction }) => {
                     flexDirection: "column",
                   }}>
                   <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                  <a href={book.infoLink} className="link-success info">
+                  <a href={book.infoLink} 
+                  target= '_blank'
+                  className="link-success info">
                     More Info
                   </a>
                   </div>

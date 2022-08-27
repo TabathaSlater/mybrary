@@ -11,7 +11,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
     <>
       <Card
         className="cardBox"
-        style={{ backgroundColor: "whitesmoke", border: "0px", height: "45rem" }}
+        style={{ backgroundColor: "whitesmoke", border: "0px", height: "45rem", width: '13%' }}
       >
         <Card.Img
           top
@@ -125,10 +125,10 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             >
               <a
                 href={book?.volumeInfo?.previewLink}
+                target='_blank'
                 className="btn-link link-secondary"
                 color="default"
                 type="button"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Preview
@@ -136,10 +136,10 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
 
               <a
                 href={book?.volumeInfo?.infoLink}
+                target='_blank'
                 className="btn-link link-secondary"
                 color="default"
                 type="button"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Info

@@ -32,7 +32,7 @@ export const Register = () => {
             })
           );
 
-          navigate("/");
+          navigate("/home");
         }
       });
   };
@@ -49,7 +49,8 @@ export const Register = () => {
           </Alert>;
         } else {
           // Good username, create user.
-          registerNewUser();
+          registerNewUser()
+          // navigate("/home");
         }
       });
   };

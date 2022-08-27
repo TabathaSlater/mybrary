@@ -69,7 +69,7 @@ export const Login = () => {
             </Button>{" "}
             <div className="textRegister">
               <div className="text">Need an account?</div>
-              <a href="register" className="link-success register">
+              <a href="/register" className="link-success register">
                 Register
               </a>
             </div>
