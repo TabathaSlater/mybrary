@@ -1,6 +1,9 @@
+
+//Component to hand the checkbox on each goal in uncompleted goal list
 export const Checkbox = ({ goalProp, setState }) => {
   const handleCheckbox = (e) => {
-    //Perform PATCH for the object
+
+    //Perform PATCH for the object to mark it complete in database on click
     fetch(`http://localhost:8088/goals/${goalProp.id}`, {
       method: "PATCH",
       headers: {
@@ -9,10 +12,12 @@ export const Checkbox = ({ goalProp, setState }) => {
       body: JSON.stringify({ completed: true }),
     })
       .then((response) => response.json())
+      //Fetch new goal list to update 
       .then(() =>
         fetch("http://localhost:8088/goals")
           .then((response) => response.json())
           .then((newGoal) => {
+            //set state of goal list to reflect changes
             setState(newGoal);
           })
       );

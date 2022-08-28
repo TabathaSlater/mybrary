@@ -1,5 +1,6 @@
 import Form from "react-bootstrap/Form";
 
+//responsible for sort dropdown in searches
 export const SearchSort = ({ setTaco }) => {
   return (
     <Form.Select

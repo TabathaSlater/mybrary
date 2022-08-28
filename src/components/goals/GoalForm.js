@@ -8,9 +8,11 @@ export const GoalForm = ({ handleClose, fetchGoals }) => {
     userId: "",
   });
 
+  //Grab user info from local storage
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
+  //handle post to database when object is created
   const handleSaveButtonClick = (event) => {
     event.preventDefault();
 
@@ -21,7 +23,7 @@ export const GoalForm = ({ handleClose, fetchGoals }) => {
       completed: false,
     };
 
-    // TODO: Perform the fetch() to POST the object to the API
+    //Perform the fetch() to POST the object to the API and refresh state
     return fetch("http://localhost:8088/goals", {
       method: "POST",
       headers: {
@@ -29,7 +31,7 @@ export const GoalForm = ({ handleClose, fetchGoals }) => {
       },
       body: JSON.stringify(ticketToSendToAPI),
     }).then((response) => response.json())
-    .then(fetchGoals);
+      .then(fetchGoals);
   };
 
   return (
@@ -47,15 +49,18 @@ export const GoalForm = ({ handleClose, fetchGoals }) => {
           }}
         />
       </Form>
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end"
+        }}>
         <Button
           variant="secondary"
           style={{ margin: "1.5%" }}
           onClick={(clickEvent) => {
             handleClose(clickEvent);
           }}
-        >
-          Close
+        >Close
         </Button>
         <Button
           variant="success"
@@ -64,8 +69,7 @@ export const GoalForm = ({ handleClose, fetchGoals }) => {
             handleSaveButtonClick(clickEvent);
             handleClose(clickEvent);
           }}
-        >
-          Add Task
+        >Add Task
         </Button>
       </div>
     </Container>

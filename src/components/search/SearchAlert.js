@@ -7,15 +7,18 @@ export const SearchAlert = ({ handleCloseAlert }) => {
         <Alert.Heading>Success!</Alert.Heading>
         <p>Your book has been added</p>
       </Alert>
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end"
+        }}>
         <Button
           variant="secondary"
           style={{ margin: "1.5%" }}
           onClick={(clickEvent) => {
             handleCloseAlert(clickEvent);
           }}
-        >
-          Close
+        >Close
         </Button>
       </div>
     </div>

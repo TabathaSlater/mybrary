@@ -1,6 +1,8 @@
+
+//Function for checkbox on completed goals list
 export const CompletedCheckbox = ({ goalProp, setState }) => {
   const handleCheckbox = (e) => {
-    //Perform PATCH for the object
+    //Perform PATCH for the object to mark it as uncompleted on click
     fetch(`http://localhost:8088/goals/${goalProp.id}`, {
       method: "PATCH",
       headers: {
@@ -10,9 +12,11 @@ export const CompletedCheckbox = ({ goalProp, setState }) => {
     })
       .then((response) => response.json())
       .then(() =>
+        //Grab list of updated goals list
         fetch("http://localhost:8088/goals")
           .then((response) => response.json())
           .then((newGoal) => {
+            //set goal list state to reflect changes
             setState(newGoal);
           })
       );
@@ -21,7 +25,7 @@ export const CompletedCheckbox = ({ goalProp, setState }) => {
   return (
     <>
       <input
-      style={{marginLeft: "9px"}}
+        style={{ marginLeft: "9px" }}
         className="checkTask"
         type="checkbox"
         defaultChecked={goalProp.completed}

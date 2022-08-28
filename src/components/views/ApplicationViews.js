@@ -12,8 +12,8 @@ export const ApplicationViews = () => {
           <>
             <Outlet />
           </>
-        }
-      >
+        }>
+
         <Route path="/home" element={<Books />} />
 
         <Route path="/search_results" element={<SearchContainer />} />

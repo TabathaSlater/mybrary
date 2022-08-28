@@ -1,17 +1,9 @@
-import { useState, useEffect } from "react";
-import { Container, Alert, Card } from "react-bootstrap";
+import { Card } from 'react-bootstrap'
 import { LibraryCompletedButton } from "./LibraryCompletedButton";
 
-export const Current = ({ books, setBooks, fetchFunction }) => {
-  const [current, setCurrent] = useState([]);
-  useEffect(() => {
-    const filteredBooks = books.filter((book) => book.statusId === 3);
-    setCurrent(filteredBooks);
-  }, [books]);
-
-  if (current.length > 0) {
+export const CurrentBookCard = ({current, fetchFunction}) => {
     return (
-      <article style={{ display: "flex", flexDirection: "row" }}>
+        <article style={{ display: "flex", flexDirection: "row" }}>
         {current.map((book) => {
           return (
             <Card
@@ -69,7 +61,7 @@ export const Current = ({ books, setBooks, fetchFunction }) => {
                   </a>
                   </div>
                   <LibraryCompletedButton
-                    current={book}
+                    book={book}
                     fetchFunction={fetchFunction} />
                 </div>
               </Card.Body>
@@ -77,29 +69,5 @@ export const Current = ({ books, setBooks, fetchFunction }) => {
           );
         })}
       </article>
-    );
-  } else {
-    return (
-      <Container>
-        <Alert variant="secondary">
-          <Alert.Heading>You Have No Current Books</Alert.Heading>
-          <p>
-            <br></br>
-            Let's get some books in here! You can click the link below to find a
-            book for your collection
-          </p>
-          <hr />
-          <p className="mb-0">
-            <a
-              href="/search_results"
-              className="link-success"
-              style={{ display: "flex", justifyContent: "flex-start" }}
-            >
-              Find Books
-            </a>
-          </p>
-        </Alert>
-      </Container>
-    );
-  }
-};
+    )
+}

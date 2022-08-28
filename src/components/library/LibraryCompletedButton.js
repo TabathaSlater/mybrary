@@ -1,16 +1,15 @@
 import { Button } from "react-bootstrap";
 
-export const LibraryCompletedButton = ({
-  current,
-  fetchFunction
-}) => {
+//Component responsible for marking books as complete
+export const LibraryCompletedButton = ({ book, fetchFunction }) => {
+  //get current user info
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
-
+  //responsible for putting relevant/updated information for books marked complete
   const handleSaveButtonClick = () => {
-    // event.preventDefault();
 
+    //______Date grabbing starts here_________
     let date = new Date();
     let day = date.getDate();
     let month = date.getMonth() + 1;
@@ -19,15 +18,16 @@ export const LibraryCompletedButton = ({
 
     let fullDate = `${year}-${month}-${day}`;
     let dateTime = time
+    //_____Date grabbing ends here_____________
 
-    // TODO: Create the object to be saved to the API
+    //Create the object to be saved to the API
     const objectToSendToAPI = {
-      title: current.title,
-      author: current.author,
-      bookCover: current.bookCover,
-      publishedDate: current.publishedDate,
-      publisher: current.publisher,
-      infoLink: current.infoLink,
+      title: book.title,
+      author: book.author,
+      bookCover: book.bookCover,
+      publishedDate: book.publishedDate,
+      publisher: book.publisher,
+      infoLink: book.infoLink,
       favorite: "",
       dateComplete: fullDate,
       dateTime: dateTime,
@@ -35,8 +35,8 @@ export const LibraryCompletedButton = ({
       userId: mybraryUserObject.id,
     };
 
-    // TODO: Perform the fetch() to PUT the object to the API
-    return fetch(`http://localhost:8088/books/${current.id}`, {
+    // Perform the fetch() to PUT the object to the API and refresh state of books list (from parent component) with the updates
+    return fetch(`http://localhost:8088/books/${book.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -57,8 +57,7 @@ export const LibraryCompletedButton = ({
         onClick={(clickEvent) => {
           handleSaveButtonClick();
         }}
-      >
-        Mark as Read
+      >Mark as Read
       </Button>
     </>
   );

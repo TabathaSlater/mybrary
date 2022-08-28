@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export const Register = () => {
+  //Set States for user
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -12,6 +13,7 @@ export const Register = () => {
 
   const navigate = useNavigate();
 
+  // Function to add a user to database once they sign-up. Utilized by following function after duplicate check is performed
   const registerNewUser = () => {
     fetch("http://localhost:8088/users", {
       method: "POST",
@@ -37,6 +39,7 @@ export const Register = () => {
       });
   };
 
+  // Function to grab user from database and check for duplicates; create user if none exist
   const handleRegister = (e) => {
     e.preventDefault();
     fetch(`http://localhost:8088/users?username=${user.username}`)
@@ -44,17 +47,15 @@ export const Register = () => {
       .then((response) => {
         if (response.length > 0) {
           // Duplicate username. No good.
-          <Alert variant="danger">
-            Account with that username already exists
-          </Alert>;
+          window.alert("Username already exists")
         } else {
           // Good username, create user.
           registerNewUser()
-          // navigate("/home");
         }
       });
   };
 
+  //update user state once a new registration occurs
   const updateUser = (evt) => {
     const copy = { ...user };
     copy[evt.target.id] = evt.target.value;

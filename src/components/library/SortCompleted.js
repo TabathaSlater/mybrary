@@ -1,5 +1,6 @@
 import Form from "react-bootstrap/Form";
 
+//Component responsible for sorting dropdown
 export const SortCompleted = ({ setSortedBooks }) => {
   return (
     <Form.Select

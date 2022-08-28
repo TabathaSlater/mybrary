@@ -8,7 +8,7 @@ export const AddToCurrent = ({ book, fetchFunction }) => {
   const handleAddToCurrent = (event, book) => {
     event.preventDefault();
 
-    //Object to be put
+    //Create updated object to be put
     const bookToPost = {
       userId: mybraryUserObject.id,
       title: book.title,
@@ -39,8 +39,7 @@ export const AddToCurrent = ({ book, fetchFunction }) => {
       onClick={(e) => {
         handleAddToCurrent(e, book);
       }}
-    >
-      Add to Current
+    >Add to Current
     </Button>
   );
 };

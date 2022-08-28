@@ -1,183 +1,172 @@
 import { useEffect, useState } from "react";
-import { Container, ListGroup, Button, Modal } from "react-bootstrap";
-import { Checkbox } from "./Checkbox";
+import { Container, Button, Modal } from "react-bootstrap";
 import { GoalForm } from "./GoalForm";
 import { GoalEdit } from "./GoalEdit";
 import { CompletedGoals } from "./CompletedGoals";
 import "./goals.css";
+import { GoalCard } from "./GoalCard";
 
 export const BookGoals = () => {
   const [goals, setGoal] = useState([]);
 
-  //State for managing GoalForm modal open and close
+  //State for managing GoalForm modal open and close for adding goals
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  //State for managing open and close of modal that edits goals
   const [showEdit, setShowEdit] = useState(false);
   const handleCloseEdit = () => setShowEdit(false);
   const handleShowEdit = () => setShowEdit(true);
 
+  //State for managing open and close of modal for completed goals
   const [showCompleted, setShowCompleted] = useState(false);
   const handleCloseCompleted = () => setShowCompleted(false);
   const handleShowCompleted = () => setShowCompleted(true);
 
+  //State used to represent the id of an individual goal
   const [goalId, setGoalId] = useState("");
 
   //pull user info from local storage
   const localMybraryUser = localStorage.getItem("mybrary_user");
   const mybraryUserObject = JSON.parse(localMybraryUser);
 
+  //function to delete a specific goal from database
   const deleteGoal = (goal) => {
     return fetch(`http://localhost:8088/goals/${goal.id}`, {
       method: "DELETE"
     })
-      // .then(response => response.json())
+      //grab state of goals to refresh list
       .then(fetchGoals)
 
   }
 
-  //fetch goals from database
+  //fetch goals matching user from database
   const fetchGoals = () => {
     fetch(`http://localhost:8088/goals?userId=${mybraryUserObject.id}`)
       .then((response) => response.json())
       .then((goalList) => {
+        //set users goals to state
         setGoal(goalList);
       });
   }
 
+  //Fetch goals function on load
   useEffect(
-  () => {
-    fetchGoals()
-  },
-  []
+    () => {
+      fetchGoals()
+    },
+    []
   )
-if (goals.length > 0) {
-  return (
-    <Container style={{borderTop: "solid 5px whitesmoke", paddingTop: "50px"}}>
-      <h3
-        className="GoalHeading"
-        style={{ display: "flex", justifyContent: "center", marginBottom: '35px'}}
-      >
-        Reading Goals
-      </h3>
-      <article>
-        {goals.map((goal) => {
-          if (goal.completed === false) {
-            return (
-              <ListGroup
-                key={`goal--${goal.id}`}
-                variant="flush"
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  margin: "10px",
-                }}
-              >
-                <div className="goalList">
-                  <Checkbox goalProp={goal} setState={setGoal} />
-                  <section
-                    style={{
-                      marginLeft: "6px",
-                      textDecoration: "underline",
-                      margin: "10px",
-                    }}
-                  >
-                    {goal.goal}
-                  </section>
-                  <a
-                    onClick={() => {
-                      handleShowEdit();
-                      setGoalId(goal.id);
-                    }}
-                    className="btn-link link-success"
-                    color="secondary"
-                    type="button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Edit
-                  </a>
-                  <a
-                    onClick={(e) => {
-                      deleteGoal(goal);
-                    }}
-                    className="btn-link link-danger"
-                    color="secondary"
-                    type="button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Delete
-                  </a>
-                </div>
-              </ListGroup>
-            );
-          }
-        })}
-      </article>
-      <div className="goalButtons">
-        <Button
-          style={{ marginTop: "15px", display: "flex" }}
-          variant="success"
-          className="addGoalButton"
-          onClick={handleShow}
-        >
-          Add Goal
-        </Button>
-        <Button
-          style={{ marginTop: "15px", display: "flex" }}
-          variant="secondary"
-          className="addGoalButton"
-          onClick={handleShowCompleted}
-        >
-          Completed
-        </Button>
-      </div>
-      {/* <Button style={{marginTop: "15px", display: "flex"}} variant="secondary" className="viewCompletedButton"
-        onClick={}>View Completed</Button> */}
-      <Modal show={show}>
-        <GoalForm handleClose={handleClose} fetchGoals={fetchGoals}/>
-      </Modal>
 
-      <Modal show={showEdit}>
-        <GoalEdit handleCloseEdit={handleCloseEdit} goalId={goalId} fetchGoals={fetchGoals}/>
-      </Modal>
+  //Conditional to show goals if they exist, or a propmpt to add goals if none exist
+  if (goals.length > 0) {
+    return (
+      <Container
+        style={{
+          borderTop: "solid 5px whitesmoke",
+          paddingTop: "50px"
+        }}>
+        <h3
+          className="GoalHeading"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: '35px'
+          }}
+        >Reading Goals
+        </h3>
+        <article>
 
-      <Modal show={showCompleted}>
-        <CompletedGoals
-          handleCloseCompleted={handleCloseCompleted}
-          setGoal={setGoal}
-          fetchGoals={fetchGoals}
-        />
-      </Modal>
-    </Container>
-  )} else {
-     return (
-      <section>
-      <h3
-        style={{ display: "flex", justifyItems: "center"}}
-      >
-        Reading Goals
-      </h3>
-      <div>
-        Get started by adding some goals!
+          {/* Component for building goals list */}
+          <GoalCard
+            goals={goals}
+            setGoal={setGoal}
+            setGoalId={setGoalId}
+            deleteGoal={deleteGoal}
+            handleShowEdit={handleShowEdit} />
 
-        <Button
-          style={{ marginTop: "15px", display: "flex" }}
-          variant="success"
-          className="addGoalButton"
-          onClick={handleShow}>
-          Add Goal
-        </Button>
+        </article>
 
+        {/* Button for adding goal */}
+        <div className="goalButtons">
+          <Button
+            style={{
+              marginTop: "15px",
+              display: "flex"
+            }}
+            variant="success"
+            className="addGoalButton"
+            onClick={handleShow}
+          >Add Goal
+          </Button>
+
+          {/* Button for marking goal as complete */}
+          <Button
+            style={{
+              marginTop: "15px",
+              display: "flex"
+            }}
+            variant="secondary"
+            className="addGoalButton"
+            onClick={handleShowCompleted}
+          >Completed
+          </Button>
+        </div>
+
+        {/* Modal for GoalForm (adding goals) */}
         <Modal show={show}>
-        <GoalForm handleClose={handleClose} fetchGoals={fetchGoals}/>
-      </Modal>
+          <GoalForm handleClose={handleClose} fetchGoals={fetchGoals} />
+        </Modal>
 
-      </div>
+        {/* Modal for editing goals */}
+        <Modal show={showEdit}>
+          <GoalEdit handleCloseEdit={handleCloseEdit} goalId={goalId} fetchGoals={fetchGoals} />
+        </Modal>
+
+        {/* Modal for shoing completed goals */}
+        <Modal show={showCompleted}>
+          <CompletedGoals
+            handleCloseCompleted={handleCloseCompleted}
+            setGoal={setGoal}
+            fetchGoals={fetchGoals}
+          />
+        </Modal>
+        
+      </Container>
+    )
+
+  } else {
+    return (
+
+      // Prompt to add goals if none exist
+      <section>
+        <h3
+          style={{
+            display: "flex",
+            justifyItems: "center"
+          }}
+        >Reading Goals
+        </h3>
+        <div>
+          Get started by adding some goals!
+
+          <Button
+            style={{ marginTop: "15px", display: "flex" }}
+            variant="success"
+            className="addGoalButton"
+            onClick={handleShow}
+          >Add Goal
+          </Button>
+
+          <Modal show={show}>
+            <GoalForm
+              handleClose={handleClose}
+              fetchGoals={fetchGoals} />
+          </Modal>
+
+        </div>
       </section>
-     )
-
-  }
-}
+    )
+  };
+};

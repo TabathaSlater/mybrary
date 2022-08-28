@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
+
+
+//Responsible for building book cards to be displayed in searchResults.js/ on find books page
 export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
+  //responsible for showing or closing modal
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -11,7 +15,12 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
     <>
       <Card
         className="cardBox"
-        style={{ backgroundColor: "whitesmoke", border: "0px", height: "45rem", width: '13%' }}
+        style={{
+          backgroundColor: "whitesmoke",
+          border: "0px",
+          height: "45rem",
+          width: '13%'
+        }}
       >
         <Card.Img
           top
@@ -35,58 +44,71 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             {book?.volumeInfo?.title}
           </h5>
           <div>
-          <Card.Text style={{ textDecoration: "underline" }}>
-            By {book?.volumeInfo?.authors}
-          </Card.Text>
-          <Card.Text>
-            {book?.volumeInfo?.publisher} {book?.volumeInfo?.publishedDate}
-          </Card.Text>
+            <Card.Text
+              style={{ textDecoration: "underline" }}
+            >By {book?.volumeInfo?.authors}
+            </Card.Text>
+            <Card.Text>
+              {book?.volumeInfo?.publisher} {book?.volumeInfo?.publishedDate}
+            </Card.Text>
           </div>
-          <div style={{display: "flex", flexDirection: "column", position: "absolute", bottom: "0", marginBottom: "15px", width: "85%", alignItems: "center"}}>
-          <Button
-            onClick={handleShow}
-            variant="warning"
-            style={{ margin: "1.5%" }}
-          >
-            More info
-          </Button>
-          <Button
-            variant="secondary"
-            style={{ margin: "1.5%" }}
-            onClick={(e) => {
-              addToWant(e, book);
-            }}
-          >
-            Want to Read
-          </Button>
-          <Button
-            id="currentBtn"
-            style={{ margin: "1.5%" }}
-            onClick={(e) => {
-              addToCurrent(e, book);
-            }}
-          >
-            Add to Current
-          </Button>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "absolute",
+              bottom: "0",
+              marginBottom: "15px",
+              width: "85%",
+              alignItems: "center"
+            }}>
+            <Button
+              onClick={handleShow}
+              variant="warning"
+              style={{ margin: "1.5%" }}
+            >More info
+            </Button>
+            <Button
+              variant="secondary"
+              style={{ margin: "1.5%" }}
+              onClick={(e) => {
+                addToWant(e, book);
+              }}
+            >Want to Read
+            </Button>
+            <Button
+              id="currentBtn"
+              style={{ margin: "1.5%" }}
+              onClick={(e) => {
+                addToCurrent(e, book);
+              }}
+            >Add to Current
+            </Button>
           </div>
         </Card.Body>
+
+        {/* Modal starts here */}
         <Modal show={show}>
           <div
             style={{ backgroundColor: "#f2e9e4" }}
-            className="modal-header d-flex justify-content-center"
-          >
-            <h5 className="modal-title text-center" id="exampleModalLabel">
+            className="modal-header d-flex justify-content-center">
+            <h5
+              className="modal-title text-center" id="exampleModalLabel">
               {book?.volumeInfo?.title}
             </h5>
           </div>
-          <div className="modal-body" style={{ backgroundColor: "#d5bdaf" }}>
-            <div className="d-flex justify-content-between ml-3">
+          <div
+            className="modal-body"
+            style={{ backgroundColor: "#d5bdaf" }}>
+            <div
+              className="d-flex justify-content-between ml-3">
               <img
                 src={book?.volumeInfo?.imageLinks?.smallThumbnail}
                 alt={book?.volumeInfo?.title}
                 style={{ height: "233px" }}
               />
-              <div style={{ marginLeft: "20px" }}>
+              <div
+                style={{ marginLeft: "20px" }}>
                 <p>Page Count: {book?.volumeInfo?.pageCount}</p>
                 <p>Authors: {book?.volumeInfo?.authors}</p>
                 <p>
@@ -95,7 +117,10 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
                 </p>
               </div>
             </div>
-            <div className="mt-3">{book?.searchInfo?.textSnippet}</div>
+            <div
+              className="mt-3">
+              {book?.searchInfo?.textSnippet}
+            </div>
           </div>
           <Modal.Footer
             className="modal-footer"
@@ -103,15 +128,13 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
               display: "flex",
               justifyContent: "space-between",
               backgroundColor: "#f2e9e4",
-            }}
-          >
+            }}>
             <div>
               <Button
                 variant="secondary"
                 onClick={handleClose}
                 style={{ marginLeft: "10px" }}
-              >
-                Close
+              >Close
               </Button>
             </div>
             <div
@@ -121,8 +144,8 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
                 justifyContent: "space-evenly",
                 flexDirection: "row",
                 marginRight: "10px",
-              }}
-            >
+              }}>
+
               <a
                 href={book?.volumeInfo?.previewLink}
                 target='_blank'
@@ -130,8 +153,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
                 color="default"
                 type="button"
                 rel="noopener noreferrer"
-              >
-                Preview
+              >Preview
               </a>
 
               <a
@@ -141,8 +163,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
                 color="default"
                 type="button"
                 rel="noopener noreferrer"
-              >
-                Info
+              >Info
               </a>
             </div>
           </Modal.Footer>

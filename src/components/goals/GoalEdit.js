@@ -19,6 +19,7 @@ export const GoalEdit = ({ handleCloseEdit, goalId, fetchGoals }) => {
       });
   }, []);
 
+  //Function for putting information when changed and refreshing state
   const handleSaveButtonClick = (event) => {
     event.preventDefault();
 
@@ -30,7 +31,7 @@ export const GoalEdit = ({ handleCloseEdit, goalId, fetchGoals }) => {
       },
       body: JSON.stringify(goal),
     }).then((response) => response.json())
-    .then(fetchGoals);
+      .then(fetchGoals);
   };
 
   return (
@@ -48,15 +49,18 @@ export const GoalEdit = ({ handleCloseEdit, goalId, fetchGoals }) => {
           }}
         />
       </Form>
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end"
+        }}>
         <Button
           variant="secondary"
           style={{ margin: "1.5%" }}
           onClick={(clickEvent) => {
             handleCloseEdit(clickEvent);
           }}
-        >
-          Close
+        >Close
         </Button>
         <Button
           variant="success"
@@ -65,8 +69,7 @@ export const GoalEdit = ({ handleCloseEdit, goalId, fetchGoals }) => {
             handleSaveButtonClick(clickEvent);
             handleCloseEdit(clickEvent);
           }}
-        >
-          Save
+        >Save
         </Button>
       </div>
     </Container>

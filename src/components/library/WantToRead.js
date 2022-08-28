@@ -1,86 +1,29 @@
 import { useState, useEffect } from "react";
-import { Container, Alert, Card } from "react-bootstrap";
-import { AddToCurrent } from "./AddToCurrentButton";
+import { Container, Alert} from "react-bootstrap";
+import { WantToReadCard } from "./WantToReadCard";
 
+//Component responsible for want to read section of library
 export const WantToRead = ({ books, fetchFunction }) => {
+  //want is the state for books marked as want to read in the database
   const [want, setWant] = useState([]);
 
+  //filter general books array for only books marked as want to read; watch books state from parent for any changes to update list
   useEffect(() => {
     const filteredBooks = books.filter((book) => book.statusId === 2);
     setWant(filteredBooks);
   }, [books]);
 
+  //Conditional to show want to read book cards if the books exist, and an alert if they do not
   if (want.length > 0) {
     return (
-      <article style={{ display: "flex", flexDirection: "row" }}>
-        {want.map((book) => {
-          return (
-            <Card
-              className="Card"
-              style={{
-                width: "13rem",
-                height: "35rem",
-                color: "#2D4B4D",
-                border: "0px",
-                // margin: "1%"
-              }}
-              key={book.id}
-            >
-              <Card.Img
-                src={book.bookCover}
-                style={{
-                  width: "75%",
-                  height: "14rem",
-                  marginLeft: "12.5%",
-                  marginTop: "6%",
-                }}
-              />
-              <Card.Body style={{ marginTop: "0px" }}>
-                <h5
-                  className="title"
-                  style={{ marginTop: "1.5%"}}
-                >
-                  {book.title}
-                </h5>
-                <Card.Text>
-                  <div
-                    className="author"
-                    style={{ textDecoration: "underline" }}
-                  >
-                    {book.author}
-                  </div>
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div>
-                      {book.publisher}
-                    </div><div>
-                      {book.publishedDate}
-                    </div></div>
-                </Card.Text>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    flexDirection: "column",
-                  }}>
-                  <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                  <a href={book.infoLink} 
-                  target='_blank'
-                  className="link-success">
-                    More Info
-                  </a>
-                  </div>
-                  <AddToCurrent
-                    book={book}
-                    setWant={setWant}
-                    fetchFunction={fetchFunction} />
-                </div>
-              </Card.Body>
-            </Card>
-          );
-        })}
-      </article>
+
+      <WantToReadCard 
+      want={want}
+      setWant={setWant}
+      fetchFunction={fetchFunction}/>
     );
   } else {
+    
     return (
       <Container>
         <Alert variant="secondary">
@@ -96,8 +39,7 @@ export const WantToRead = ({ books, fetchFunction }) => {
               href="/search_results"
               className="link-success"
               style={{ display: "flex", justifyContent: "flex-start" }}
-            >
-              Find Books
+            >Find Books
             </a>
           </p>
         </Alert>

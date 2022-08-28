@@ -1,17 +1,20 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Alert, Container, Form, Col, Button } from "react-bootstrap";
+import { Container, Form, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.css";
 
 export const Login = () => {
+  //Set States for relenavt user information
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
+  // Function to handle the login once the button is clicked
   const handleLogin = (e) => {
     e.preventDefault();
 
+    //Fetch should be specific to the user trying to log in
     return fetch(`http://localhost:8088/users?username=${username}`)
       .then((response) => response.json())
       .then((foundUsers) => {
@@ -28,7 +31,7 @@ export const Login = () => {
 
           navigate("/home");
         } else {
-          <Alert variant="danger">Invalid Login</Alert>;
+          window.alert("Invalid Login")
         }
       });
   };
@@ -64,13 +67,13 @@ export const Login = () => {
             </Form.Group>
           </Col>
           <div className="loginButtons">
-            <Button variant="outline-success" type="submit">
-              Sign In
+            <Button variant="outline-success" type="submit"
+            >Sign In
             </Button>{" "}
             <div className="textRegister">
               <div className="text">Need an account?</div>
-              <a href="/register" className="link-success register">
-                Register
+              <a href="/register" className="link-success register"
+              >Register
               </a>
             </div>
           </div>
