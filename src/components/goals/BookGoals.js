@@ -62,18 +62,9 @@ export const BookGoals = () => {
   //Conditional to show goals if they exist, or a propmpt to add goals if none exist
   if (goals.length > 0) {
     return (
-      <Container
-        style={{
-          borderTop: "solid 5px whitesmoke",
-          paddingTop: "50px"
-        }}>
+      <Container className="goals_container">
         <h3
-          className="GoalHeading"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: '35px'
-          }}
+          className="goalHeading"
         >Reading Goals
         </h3>
         <article>
@@ -91,10 +82,6 @@ export const BookGoals = () => {
         {/* Button for adding goal */}
         <div className="goalButtons">
           <Button
-            style={{
-              marginTop: "15px",
-              display: "flex"
-            }}
             variant="success"
             className="addGoalButton"
             onClick={handleShow}
@@ -103,10 +90,6 @@ export const BookGoals = () => {
 
           {/* Button for marking goal as complete */}
           <Button
-            style={{
-              marginTop: "15px",
-              display: "flex"
-            }}
             variant="secondary"
             className="addGoalButton"
             onClick={handleShowCompleted}
@@ -141,18 +124,13 @@ export const BookGoals = () => {
 
       // Prompt to add goals if none exist
       <section>
-        <h3
-          style={{
-            display: "flex",
-            justifyItems: "center"
-          }}
+        <h3 className="goal_prompt"
         >Reading Goals
         </h3>
-        <div>
+        <div className="goals_alert_prompt">
           Get started by adding some goals!
 
           <Button
-            style={{ marginTop: "15px", display: "flex" }}
             variant="success"
             className="addGoalButton"
             onClick={handleShow}

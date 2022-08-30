@@ -37,8 +37,7 @@ export const WantToRead = ({ books, fetchFunction }) => {
           <p className="mb-0">
             <a
               href="/search_results"
-              className="link-success"
-              style={{ display: "flex", justifyContent: "flex-start" }}
+              className="link-success library_find_link"
             >Find Books
             </a>
           </p>

@@ -1,50 +1,27 @@
 import {Card} from 'react-bootstrap'
 import {AddToCurrent} from "./AddToCurrentButton"
+import './library.css'
 
 export const WantToReadCard = ({want, setWant, fetchFunction}) => {
     return (
 
-        <article
-            style={{
-                display: "flex",
-                flexDirection: "row"
-            }}>
+        <article className="library_article_wrap">
             {want.map((book) => {
                 return (
-                    <Card
-                        className="Card"
-                        style={{
-                            width: "13rem",
-                            height: "35rem",
-                            color: "#2D4B4D",
-                            border: "0px",
-                        }}
+                    <Card className="library_completed_card"
                         key={book.id}>
-                        <Card.Img
-                            src={book.bookCover}
-                            style={{
-                                width: "75%",
-                                height: "14rem",
-                                marginLeft: "12.5%",
-                                marginTop: "6%",
-                            }} />
+                        <Card.Img className="library_card_img"
+                            src={book.bookCover} />
                         <Card.Body style={{ marginTop: "0px" }}>
-                            <h5
-                                className="title"
-                                style={{ marginTop: "1.5%" }}>
+                            <h5 className="library_title">
                                 {book.title}
                             </h5>
                             <Card.Text>
                                 <div
-                                    className="author"
-                                    style={{ textDecoration: "underline" }}>
+                                    className="library_author">
                                     {book.author}
                                 </div>
-                                <div
-                                    style={{
-                                        display: "flex",
-                                        flexDirection: "column"
-                                    }}>
+                                <div className="library_publish">
                                     <div>
                                         {book.publisher}
                                     </div>
@@ -53,18 +30,8 @@ export const WantToReadCard = ({want, setWant, fetchFunction}) => {
                                     </div>
                                 </div>
                             </Card.Text>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    flexDirection: "column",
-                                }}>
-                                <div
-                                    style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        marginRight: '10px'
-                                    }}>
+                            <div className="library_links">
+                                <div className="library_more_info">
                                     <a
                                         href={book.infoLink}
                                         target='_blank'

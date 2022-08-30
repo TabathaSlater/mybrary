@@ -1,64 +1,42 @@
-import { Card } from 'react-bootstrap'
+import { Card} from 'react-bootstrap'
 import { LibraryCompletedButton } from "./LibraryCompletedButton";
+import './library.css'
 
-export const CurrentBookCard = ({current, fetchFunction}) => {
-    return (
-        <article style={{ display: "flex", flexDirection: "row" }}>
-        {current.map((book) => {
-          return (
+export const CurrentBookCard = ({ current, fetchFunction }) => {
+  return (
+    <article className='library_article_wrap'>
+      {current.map((book) => {
+        return (
             <Card
-              className="Card"
-              style={{
-                width: "13rem",
-                height: "35rem",
-                color: "#2D4B4D",
-                border: "0px",
-                // margin: "1%"
-              }}
-              key={book.id}
-            >
-              <Card.Img
-                src={book.bookCover}
-                style={{
-                  width: "75%",
-                  height: "14rem",
-                  marginLeft: "12.5%",
-                  marginTop: "6%",
-                }}
-              />
-              <Card.Body style={{ marginTop: "0px" }}>
+              className="library_current-card"
+              key={book.id}>
+              <Card.Img className='library_card_img'
+                src={book.bookCover}/>
+              <Card.Body 
+              style={{ marginTop: "0px" }}>
                 <h5
-                  className="title"
-                  style={{ marginTop: "1.5%" }}
-                >
+                  className="library_title">
                   {book.title}
                 </h5>
                 <Card.Text>
                   <div
-                    className="author"
-                    style={{ textDecoration: "underline" }}
-                  >
+                    className="library_author">
                     {book.author}
                   </div>
-                  <div style={{ display: "flex", flexDirection: "column" }}>
+                  <div className='library_publish'>
                     <div>
                       {book.publisher}
                     </div><div>
                       {book.publishedDate}
                     </div></div>
                 </Card.Text>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    flexDirection: "column",
-                  }}>
-                  <div style={{display: "flex", justifyContent: "center", marginRight: '10px'}}>
-                  <a href={book.infoLink} 
-                  target= '_blank'
-                  className="link-success info">
-                    More Info
-                  </a>
+                <div className='library_links'>
+                  <div className='library_more_info'>
+                    <a href={book.infoLink}
+                      target='_blank'
+                      className="link-success info">
+                      More Info
+                    </a>
                   </div>
                   <LibraryCompletedButton
                     book={book}
@@ -66,8 +44,8 @@ export const CurrentBookCard = ({current, fetchFunction}) => {
                 </div>
               </Card.Body>
             </Card>
-          );
-        })}
-      </article>
-    )
+        );
+      })}
+    </article>
+  )
 }

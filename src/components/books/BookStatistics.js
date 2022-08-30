@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import { Container } from 'react-bootstrap'
+import './books.css'
+
 // Show readers how many books they've read overall
 // show readers how many books they've read over a given amount of time
 // show readers the average number of books they read each month
@@ -74,41 +76,17 @@ export const BookStatistics = () => {
     return (
         <Container>
             <div>
-                <h5
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        textDecoration: "underline",
-                        marginTop: "45px"
-                    }}
+                <h5 className="total_books_h5"
                 >Total Books Read:</h5>
-                <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        marginTop: "30px",
-                        fontSize: "25px",
-                        fontWeight: "bold"
-                    }}>
+
+                <div className="total_read">
                     {totalRead}
                 </div>
 
-                <h5
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        marginTop: "40px",
-                        textDecoration: "underline"
-                    }}
+                <h5 className="average_books_h5"
                 >Average Books per Month: </h5>
-                <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        marginTop: "30px",
-                        fontSize: "25px",
-                        fontWeight: "bold"
-                    }}>
+
+                <div className="books_read_avg">
                     {booksReadAvg}
                 </div>
             </div>

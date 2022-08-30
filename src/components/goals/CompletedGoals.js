@@ -5,9 +5,13 @@ import { Button } from "react-bootstrap";
 export const CompletedGoals = ({ handleCloseCompleted, setGoal }) => {
   const [complete, setComplete] = useState([]);
 
+  const localMybraryUser = localStorage.getItem("mybrary_user");
+  const mybraryUserObject = JSON.parse(localMybraryUser);
+
+
   //Grab goals from databse and set to state
   const fetchCompletedGoals = () => {
-    return fetch("http://localhost:8088/goals")
+    return fetch(`http://localhost:8088/goals?userId=${mybraryUserObject.id}`)
       .then((response) => response.json())
       .then((goalArray) => {
         setComplete(goalArray);
@@ -30,8 +34,8 @@ export const CompletedGoals = ({ handleCloseCompleted, setGoal }) => {
 
   return (
     <>
-      <article
-        style={{ backgroundColor: "#f2e9e4" }}>
+      <article className="completed_article">
+        <h5 className="goal_form_heading">Completed Goals</h5>
         {complete.map((goal) => {
           if (goal.completed === true) {
             return (
@@ -39,29 +43,17 @@ export const CompletedGoals = ({ handleCloseCompleted, setGoal }) => {
                 <section
                   className="goalItem"
                   key={`complete--${complete.id}`}>
-                  <h6
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      margin: "10px",
-                      marginTop: "15px",
-                      textDecoration: "underline"
-                    }}
-                  >Completed Goals</h6>
-                  <div
-                    style={{
-                      display:
-                        "flex",
-                      flexDirection: "row",
-                      margin: "15px"
-                    }}>
+
+                  <div className="goal_item_div">
+
                     <CompletedCheckbox
                       goalProp={goal}
                       setState={setGoal} />
-                    <div
-                      style={{ marginLeft: "10px" }}>
+
+                    <div className="goal_nested_div">
                       {goal.goal}
                     </div>
+
                     <div>
                       <a
                         onClick={(e) => {
@@ -84,18 +76,9 @@ export const CompletedGoals = ({ handleCloseCompleted, setGoal }) => {
           }
         })}
       </article>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          backgroundColor: "whitesmoke"
-        }}>
-        <Button
+      <div className="completed_goal_item_div">
+        <Button className="completed_close_button"
           variant="secondary"
-          style={{
-            margin: "1.5%",
-            width: "20%"
-          }}
           onClick={(clickEvent) => {
             handleCloseCompleted(clickEvent);
           }}

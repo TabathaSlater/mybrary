@@ -66,7 +66,7 @@ export const Register = () => {
     <form className="form--login" onSubmit={handleRegister}>
       <div className="registration">
         <h3 className="card-title signup fw-normal">Sign Up</h3>
-        <div>
+        <div className="registration_inputs">
           <input
             type="text"
             className="form-control"
@@ -76,8 +76,7 @@ export const Register = () => {
             required
             autoFocus
           />
-        </div>
-        <div>
+
           <input
             type="password"
             className="form-control"
@@ -88,7 +87,7 @@ export const Register = () => {
             autoFocus
           />
         </div>
-        <div className="loginButtons">
+        <div className="loginButtons_registration">
           <Button variant="outline-success" type="submit">
             Sign Up
           </Button>{" "}

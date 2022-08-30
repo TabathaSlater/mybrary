@@ -1,6 +1,11 @@
 
 //Function for checkbox on completed goals list
 export const CompletedCheckbox = ({ goalProp, setState }) => {
+
+  const localMybraryUser = localStorage.getItem("mybrary_user");
+  const mybraryUserObject = JSON.parse(localMybraryUser);
+
+
   const handleCheckbox = (e) => {
     //Perform PATCH for the object to mark it as uncompleted on click
     fetch(`http://localhost:8088/goals/${goalProp.id}`, {
@@ -13,7 +18,7 @@ export const CompletedCheckbox = ({ goalProp, setState }) => {
       .then((response) => response.json())
       .then(() =>
         //Grab list of updated goals list
-        fetch("http://localhost:8088/goals")
+        fetch(`http://localhost:8088/goals?userId=${mybraryUserObject.id}`)
           .then((response) => response.json())
           .then((newGoal) => {
             //set goal list state to reflect changes

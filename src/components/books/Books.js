@@ -9,48 +9,27 @@ export const Books = () => {
 
     //return all children components that make up home page
     return (
-        <section
-            style={{
-                marginTop: "45px",
-                display: "flex",
-                justifyContent: "center",
-                justifyContent: "space-evenly"
-            }}>
+        <section className="booksjs_container">
 
             {/* Dive contains the current book component */}
-            <div className="currentBook"
-                style={{
-                    borderRight: "solid 5px whitesmoke",
-                    paddingRight: "175px",
-                    marginLeft: '10%'
-                }}>
+            <div className="currentBook">
                 <CurrentBook />
             </div>
 
             {/* This div contains both the statistics component and the goals component */}
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    marginLeft: "5%",
-                    marginRight: '5%',
-                    width: '33%'
-                }}>
-                <div className="statistics"
-                    style={{ marginBottom: "50px" }}>
+            <div className="stats_goals_div">
+
+                <div className="statistics">
                     <BookStatistics />
                 </div>
+
                 <div className="goals">
                     <BookGoals />
                 </div>
             </div>
 
             {/* Div contains random book generator component */}
-            <div
-                style={{
-                    borderLeft: "solid 5px whitesmoke",
-                    marginTop: '25px'
-                }}>
+            <div className="book_generator">
                 <RandomBook />
             </div>
 

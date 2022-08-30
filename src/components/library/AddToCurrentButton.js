@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import './library.css'
 
 export const AddToCurrent = ({ book, fetchFunction }) => {
   const localMybraryUser = localStorage.getItem("mybrary_user");
@@ -35,7 +36,6 @@ export const AddToCurrent = ({ book, fetchFunction }) => {
   return (
     <Button
       id="currentBtn"
-      style={{ margin: "1.5%" }}
       onClick={(e) => {
         handleAddToCurrent(e, book);
       }}

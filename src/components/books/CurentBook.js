@@ -12,13 +12,14 @@ import { HomePageCurrentCard } from "./HomePageCurrentCard";
 //Responsible for getting the first current book user has set and displaying on home page
 export const CurrentBook = () => {
   const [current, setCurrent] = useState({});
+  const [refreshTrigger, setRefresh] = useState(false)
 
   //Get current user info
   const localMybraryUser = localStorage.getItem("mybrary_user");
-  const mybraryUserObject = JSON.parse(localMybraryUser);
+  const mybraryUserObject = JSON.parse(localMybraryUser); 
 
   //Get current books related to the current user
-  useEffect(() => {
+  const booksFetch = () => {
     fetch(
       `http://localhost:8088/books?statusId=3&&userId=${mybraryUserObject.id}`
     )
@@ -28,7 +29,10 @@ export const CurrentBook = () => {
         //set current book to the first book the user has started reading/ first object in array
         setCurrent(book);
       });
-  }, []);
+  }
+  useEffect(() => {
+      booksFetch()
+  }, [refreshTrigger]);
 
   //conditional to show the current book if there is one, or a prompt to find a book
   if (current) {
@@ -36,18 +40,14 @@ export const CurrentBook = () => {
 
       <HomePageCurrentCard
         current={current}
-        setCurrent={setCurrent} />
+        setCurrent={setCurrent}
+        setRefresh={setRefresh}
+        refreshTrigger={refreshTrigger} />
     );
 
   } else {
     return (
-      <section
-        style={{
-          marginTop: '175px',
-          width: "18rem",
-          color: "#2D4B4D",
-          border: "0px"
-        }}>
+      <section className="prompt_current">
         <Alert variant="secondary">
           <Alert.Heading>You Have No Current Books</Alert.Heading>
           <p>
@@ -59,12 +59,8 @@ export const CurrentBook = () => {
           <p className="mb-0">
             <a
               href="/search_results"
-              className="link-success"
-              style={{
-                display: "flex",
-                justifyContent: "center"
-              }}>
-              Find Books
+              className="link-success find_current"
+              >Find Books
             </a>
           </p>
         </Alert>

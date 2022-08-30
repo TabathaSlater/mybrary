@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { SearchedBookCard } from "./SearchedBookCard";
 import { SearchSort } from "./SearchSort";
-import "./search.css";
 import { Modal } from "react-bootstrap";
 import { SearchAlert } from "./SearchAlert";
 import { SearchedByNew } from "./SearchedByNew";
 import { SearchedByOld } from "./SearchedByOld";
+import "./search.css";
 
 //Parent = SearchContainer
 export const SearchResult = ({ bookArray, setSort }) => {

@@ -15,7 +15,7 @@ export const Login = () => {
     e.preventDefault();
 
     //Fetch should be specific to the user trying to log in
-    return fetch(`http://localhost:8088/users?username=${username}`)
+    return fetch(`http://localhost:8088/users?username=${username}&password=${password}`)
       .then((response) => response.json())
       .then((foundUsers) => {
         if (foundUsers.length === 1) {

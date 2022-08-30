@@ -37,7 +37,7 @@ export const GoalForm = ({ handleClose, fetchGoals }) => {
   return (
     <Container>
       <Form className="goalForm">
-        <Form.Label>Add a new goal</Form.Label>
+        <h5 className="goal_form_heading">Add a new goal</h5>
         <Form.Control
           type="text"
           placeholder="Add your task"

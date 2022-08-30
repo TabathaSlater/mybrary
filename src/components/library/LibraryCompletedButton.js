@@ -50,10 +50,8 @@ export const LibraryCompletedButton = ({ book, fetchFunction }) => {
 
   return (
     <>
-      <Button
-        style={{ marginTop: "1.5%" }}
+      <Button className="library_completed_button"
         variant="secondary"
-        className="addToRead"
         onClick={(clickEvent) => {
           handleSaveButtonClick();
         }}

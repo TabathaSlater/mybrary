@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .goalList {
@@ -12,4 +13,80 @@
 .btn-link {
     margin-top: 10px;
     justify-self: flex-end;
+} 
+
+.goals_container {
+    border-top: solid 5px whitesmoke;
+    padding-top: 50px;
+}
+
+.goalHeading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.goal_prompt {
+    text-align: center;
+}
+
+.goals_alert_prompt {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addGoalButton {
+    display: flex;
+    width: max-content;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.list_homepage {
+    display: flex;
+    flex-direction: row;
+    margin: .6%;
+}
+
+.goal_list_section {
+    margin-left: 6px;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+.full_goals_homepage {
+    display: flex;
+    flex-direction: column;
+}
+
+.goal_form_heading {
+    margin: 3%;
+    text-align: center;
+}
+
+.completed_article {
+    background-color: #f2e9e4;
+}
+
+.goal_item_div {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.goal_nested_div {
+    margin-left: 10px;
+}
+
+.completed_goal_item_div {
+    display: flex;
+    justify-content: flex-end;
+    background-color: whitesmoke;
+}
+
+.completed_close_button {
+    margin: 1.5%;
+    width: 20%;
 }

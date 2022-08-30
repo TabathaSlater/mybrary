@@ -31,7 +31,7 @@
     },
     {
       "userId": 1,
-      "goal": "Read 2 books this month",
+      "goal": "Read 4 books this month",
       "completed": false,
       "id": 3
     },
@@ -105,6 +105,37 @@
       "id": 11
     },
     {
+      "title": "Will Byers: Secret Files (Stranger Things)",
+      "author": [
+        "Matthew J. Gilbert"
+      ],
+      "bookCover": "http://books.google.com/books/content?id=UEl0DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "publishedDate": "2019-09-24",
+      "publisher": "Random House Books for Young Readers",
+      "infoLink": "https://play.google.com/store/books/details?id=UEl0DwAAQBAJ&source=gbs_api",
+      "favorite": "",
+      "dateComplete": "2022-8-29",
+      "dateTime": 1661797297605,
+      "statusId": 1,
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Stranger Things Library Edition Volume 1",
+      "author": [
+        "Jody Houser"
+      ],
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=9vU1EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "favorite": "",
+      "publisher": "Dark Horse Comics",
+      "publishedDate": "2021-09-14",
+      "infoLink": "https://play.google.com/store/books/details?id=9vU1EAAAQBAJ&source=gbs_api",
+      "statusId": 2,
+      "id": 16
+    },
+    {
       "userId": 1,
       "title": "Stranger Things: Worlds Turned Upside Down",
       "author": [
@@ -117,7 +148,21 @@
       "publishedDate": "2018-10-30",
       "infoLink": "https://play.google.com/store/books/details?id=KFVeDwAAQBAJ&source=gbs_api",
       "statusId": 3,
-      "id": 12
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "title": "Stranger things. Sei",
+      "author": [
+        "Jody Houser"
+      ],
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=39dSzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "favorite": "",
+      "publishedDate": "2020",
+      "infoLink": "http://books.google.com/books?id=39dSzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
+      "statusId": 3,
+      "id": 24
     },
     {
       "userId": 1,
@@ -132,7 +177,23 @@
       "publishedDate": "2022-07-05",
       "infoLink": "http://books.google.com/books?id=LP0rzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
       "statusId": 3,
-      "id": 13
+      "id": 25
+    },
+    {
+      "title": "Stranger Things: The Other Side (Graphic Novel)",
+      "author": [
+        "Jody Houser"
+      ],
+      "bookCover": "http://books.google.com/books/content?id=wo6RDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "publishedDate": "2019-05-07",
+      "publisher": "Dark Horse Comics",
+      "infoLink": "http://books.google.com/books?id=wo6RDwAAQBAJ&dq=stranger+things&hl=&source=gbs_api",
+      "favorite": "",
+      "dateComplete": "2022-8-30",
+      "dateTime": 1661834521913,
+      "statusId": 1,
+      "userId": 1,
+      "id": 26
     }
   ]
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { CompletedBooks } from "./CompletedBooks";
 import { CurrentBooks } from "./CurrentBooks";
 import { WantToRead } from "./WantToRead";
+import './library.css'
 
 //Parent component that renders all sections of library
 export const Library = () => {
@@ -29,38 +30,25 @@ export const Library = () => {
 
   //Each child component in the html is a section of the library
   return (
-    <article
-      style={{ marginLeft: '40px' }}>
-      <div
-        style={{ borderBottom: "solid 5px whitesmoke" }}>
-        <h2
-          style={{ margin: "10px" }}
+    <article className="main_library_article">
+      <div className="main_library_current">
+        <h2 className="library_current_head"
         >Currently Reading</h2>
         
         <CurrentBooks books={books} setBooks={setBooks} fetchFunction={fetchFunction} />
 
       </div>
 
-      <div
-        style={{
-          borderBottom: "solid 5px whitesmoke",
-          marginTop: "20px"
-        }}>
-        <h2
-          style={{ marginLeft: "10px" }}
+      <div className="library_to_read">
+        <h2 className="library_toRead_head"
         >Books To Read</h2>
 
         <WantToRead books={books} setBooks={setBooks} fetchFunction={fetchFunction} />
 
       </div>
 
-      <div
-        style={{ marginTop: "20px" }}>
-        <h2
-          style={{
-            marginLeft: "10px",
-            marginTop: "5px"
-          }}
+      <div className="main_library_completed_div">
+        <h2 className="library_completed_head"
         >Completed Books</h2>
 
         <CompletedBooks books={books} setBooks={setBooks} fetchFunction={fetchFunction} />

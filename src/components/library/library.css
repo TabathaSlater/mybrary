@@ -1,0 +1,119 @@
+.currentBtn {
+    margin: 2%;
+    margin-bottom: 10px; 
+    width: 9rem;
+}
+
+.library_current-card {
+    width: 13rem;
+    height: 35rem;
+    color: #2D4B4D;
+    border: 0px;
+    margin: .7%;
+}
+
+.library_completed_card {
+    width: 13rem;
+    height: 35rem;
+    color: #2D4B4D;
+    border: 0px;
+    margin: .7%;
+    margin-top: 25px;
+}
+
+.library_card_img {
+    width: 75%;
+    height: 14rem;
+    margin-left: 12.5%;
+    margin-top: 6%;
+}
+
+.library_publish {
+    display: flex;
+    flex-direction: column;
+}
+
+.library_links {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+}
+
+.library_more_info {
+    display: flex; 
+    justify-content: flex-start; 
+    margin-right: '10px'
+}
+
+.library_title{
+    margin: 2%;
+}
+
+.library_author {
+    text-decoration: underline;
+}
+
+.library_find_link {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main_library_article {
+    margin-left: 40px;
+}
+
+.main_library_current {
+    border-bottom: solid 5px whitesmoke;
+}
+
+.library_current_head {
+    margin: 10px;
+}
+
+.library_to_read {
+    border-bottom: solid 5px whitesmoke;
+    margin-top: 20px;
+}
+
+.library_toRead_head {
+    margin: 10px;
+}
+
+.main_library_completed_div {
+    margin-top: 20px;
+}
+
+.library_completed_head {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.library_completed_button {
+    margin-top: 1.5%;
+    margin-bottom: 10px; 
+    width: 10rem;
+}
+
+.sorted_complete_div {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.sorted_complete_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.library_delete_btn {
+    margin-top: 1.5%;
+    width: 10rem;
+}
+
+.library_article_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

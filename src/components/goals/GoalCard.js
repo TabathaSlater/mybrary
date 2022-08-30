@@ -4,29 +4,20 @@ import { ListGroup } from "react-bootstrap";
 //Parent is BookGoals.js
 export const GoalCard = ({ goals, setGoal, setGoalId, deleteGoal, handleShowEdit }) => {
     return (
-        <>
+        <section className="full_goals_homepage">
             {/* Map through goal array to show each uncompleted goal individually */}
             {goals.map((goal) => {
                 if (goal.completed === false) {
                     return (
                         <ListGroup
+                        className="list_homepage"
                             key={`goal--${goal.id}`}
-                            variant="flush"
-                            style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                margin: "10px",
-                            }}>
+                            variant="flush">
                             <div className="goalList">
                                 <Checkbox
                                     goalProp={goal}
                                     setState={setGoal} />
-                                <section
-                                    style={{
-                                        marginLeft: "6px",
-                                        textDecoration: "underline",
-                                        margin: "10px",
-                                    }}>
+                                <section className="goal_list_section">
                                     {goal.goal}
                                 </section>
 
@@ -61,6 +52,6 @@ export const GoalCard = ({ goals, setGoal, setGoalId, deleteGoal, handleShowEdit
                     );
                 }
             })}
-        </>
+        </section>
     )
 }

@@ -13,10 +13,14 @@
 
 .statistics {
     margin: 5px;
+    margin-bottom: 50px;
 }
 
 .currentBook {
     margin: 5px;
+    margin-left: 10%;
+    border-right: solid 5px whitesmoke;
+    padding-right: 175px;
 }
 
 .goals {
@@ -30,16 +34,188 @@
     margin-top: 10px;
 }
 
+.author {
+    text-decoration: underline;
+}
+
 .currentHeading {
     margin-top: 6px;
     margin-bottom: 0px;
+    text-align: center;
 
 }
+
+.current_img {
+    width: 75%;
+    height: fit-content;
+    margin-left: 12.5%;
+    margin-top: 6%;
+}
+
+.info {
+    margin-left: 40px;
+}
+
+.more_info {
+    margin-left: 5px;
+}
+
 
 .title {
     display: flex;
     justify-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-  
+}
+
+.book_button {
+ margin-top: 10px;
+ width: 90%;
+
+}
+
+.randomBooksButtons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.random_preview {
+    margin-right: 16%;
+}
+
+.bookButton_h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.random_prompt {
+    width: 33%;
+    margin-left: 175px;
+    margin-top: 150px;
+}
+
+.random_link_info {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.random_h4 {
+    margin: 15px;
+    text-align: center;
+}
+
+.random_text {
+    margin-top: 17px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.random_card {
+    width: 18rem;
+    height: 40rem;
+    color: #2D4B4D;
+    border: 0px;
+    margin-left: 175px;
+    margin-right: 250px;
+}
+
+.random_card_img {
+    width: 70%;
+    height: fit-content;
+    margin-left: 12.5%;
+    margin-top: 5%;
+
+}
+
+.random_author {
+    text-decoration: underline;
+}
+
+.booksjs_container {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.stats_goals_div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 33%;
+}
+
+.book_generator {
+    border-left: solid 5px whitesmoke;
+    margin-top: 25px;
+}
+
+.total_books_h5 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-top: 45px;
+
+}
+
+.total_read {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.average_books_h5 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-decoration: underline;
+}
+
+.books_read_avg {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.readButton {
+    margin-top: 15px;
+}
+
+.prompt_current {
+    margin-top: 175px;
+    width: 18rem;
+    color: #2D4B4D;
+    border: 0px;
+}
+
+.find_current {
+    display: flex;
+    justify-content: center;
+}
+
+.currentButtons {
+    position: absolute;
+    bottom: 0;
+}
+
+.wholeCurrentCard {
+    width: 18rem;
+    height: 39rem;
+    color: #2D4B4D;
+    border: 0px;
+    margin-top: 30px;
 }

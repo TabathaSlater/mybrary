@@ -3,38 +3,17 @@ import { Card } from 'react-bootstrap'
 
 export const RandomBookCard = ({ randomBooks, setButton, NYTAPIFetch }) => {
     return (
-        <Card
-            style={{
-                width: "18rem",
-                color: "#2D4B4D",
-                border: "0px",
-                marginLeft: "175px",
-                marginRight: '250px'
-            }}>
-            <h3
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginBottom: "0px",
-                    marginTop: "10px"
-                }}
+        <Card className="random_card">
+            <h3 className="bookButton_h3"
             >Book Button
             </h3>
-            <Card.Img
-                src={randomBooks?.volumeInfo?.imageLinks?.smallThumbnail}
-                style={{
-                    width: "75%",
-                    height: "fit-content",
-                    marginLeft: "12.5%",
-                    marginTop: "5%",
-                }} />
-            <Card.Body
-                style={{ marginTop: "0px" }}>
+            <Card.Img className="random_card_img"
+                src={randomBooks?.volumeInfo?.imageLinks?.smallThumbnail}/>
+            <Card.Body>
                 <h5 className="title">
                     {randomBooks?.volumeInfo?.title}</h5>
                 <Card.Text>
-                    <div className="author"
-                        style={{ textDecoration: "underline" }}>
+                    <div className="random_author">
                         {randomBooks?.volumeInfo?.authors}
                     </div>
                     <div>
@@ -42,32 +21,25 @@ export const RandomBookCard = ({ randomBooks, setButton, NYTAPIFetch }) => {
                     </div>
                 </Card.Text>
                 <div className="randomBooksButtons">
-                    <div className="linkInfo"
-                        style={{
-                            display: 'flex',
-                            justifyContent: "space-between",
-                            marginTop: "20px",
-                            marginBottom: '0px'
-                        }}>
+                    <div className="random_link_info">
                         <a
                             href={randomBooks?.volumeInfo?.infoLink}
                             target="_blank"
-                            className="link-success info"
+                            className="link-success"
                         >More Info
                         </a>
                         <a
                             href={randomBooks?.volumeInfo?.previewLink}
                             target="_blank"
-                            className="link-success info"
-                            style={{ marginLeft: "40px" }}
+                            className="link-success random_preview"
                         >Preview
                         </a>
                     </div>
-                </div>
-            </Card.Body>
             <BookButton
                 setButton={setButton}
                 apiFetch={NYTAPIFetch} />
+                </div>
+            </Card.Body>
         </Card>
     )
 }
