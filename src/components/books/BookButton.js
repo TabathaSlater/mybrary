@@ -13,6 +13,7 @@ export const BookButton = ({ setButton, apiFetch }) => {
                     setButton(true)
                     //fetch new data from api so that relevant information is refreshed
                     apiFetch()
+
                 }}
             >Generate Book
             </Button>

@@ -12,20 +12,36 @@
 }
 
 .statistics {
-    margin: 5px;
     margin-bottom: 50px;
-}
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 2%;
+    padding-bottom: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+}   
 
 .currentBook {
     margin: 5px;
-    margin-left: 10%;
+    margin-left: 11%;
     border-right: solid 5px whitesmoke;
-    padding-right: 175px;
+    padding-right: 6%;
+}
+
+.book_generator {
+    border-left: solid 5px whitesmoke;
+    margin-top: 25px;
+    /* margin-right: 11%; */
+    padding-left: 6%;
 }
 
 .goals {
-    margin: 5px;
-}
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 2%;
+    padding-bottom: 7%;
+    padding-left: 10%;
+    padding-right: 10%;}
 
 .linkInfo {
     display: flex;
@@ -90,13 +106,13 @@
 .bookButton_h3 {
     display: flex;
     justify-content: center;
-    margin-bottom: 0px;
-    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-top: 9px;
 }
 
 .random_prompt {
-    width: 33%;
-    margin-left: 175px;
+    width: 50%;
+    margin-left: 9%;
     margin-top: 150px;
 }
 
@@ -124,7 +140,6 @@
     height: 40rem;
     color: #2D4B4D;
     border: 0px;
-    margin-left: 175px;
     margin-right: 250px;
 }
 
@@ -153,11 +168,6 @@
     margin-left: 5%;
     margin-right: 5%;
     width: 33%;
-}
-
-.book_generator {
-    border-left: solid 5px whitesmoke;
-    margin-top: 25px;
 }
 
 .total_books_h5 {

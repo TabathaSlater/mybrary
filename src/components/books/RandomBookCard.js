@@ -8,7 +8,7 @@ export const RandomBookCard = ({ randomBooks, setButton, NYTAPIFetch }) => {
             >Book Button
             </h3>
             <Card.Img className="random_card_img"
-                src={randomBooks?.volumeInfo?.imageLinks?.smallThumbnail}/>
+                src={randomBooks?.volumeInfo?.imageLinks?.smallThumbnail} />
             <Card.Body>
                 <h5 className="title">
                     {randomBooks?.volumeInfo?.title}</h5>
@@ -35,9 +35,9 @@ export const RandomBookCard = ({ randomBooks, setButton, NYTAPIFetch }) => {
                         >Preview
                         </a>
                     </div>
-            <BookButton
-                setButton={setButton}
-                apiFetch={NYTAPIFetch} />
+                    <BookButton
+                        setButton={setButton}
+                        apiFetch={NYTAPIFetch} />
                 </div>
             </Card.Body>
         </Card>

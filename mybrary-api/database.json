@@ -90,21 +90,6 @@
       "id": 9
     },
     {
-      "userId": 1,
-      "title": "Stranger Things: SIX (Graphic Novel)",
-      "author": [
-        "Jody Houser"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=KYiODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
-      "publishedDate": "2019-11-26",
-      "infoLink": "https://play.google.com/store/books/details?id=KYiODwAAQBAJ&source=gbs_api",
-      "statusId": 2,
-      "id": 11
-    },
-    {
       "title": "Will Byers: Secret Files (Stranger Things)",
       "author": [
         "Matthew J. Gilbert"
@@ -122,21 +107,6 @@
     },
     {
       "userId": 1,
-      "title": "Stranger Things Library Edition Volume 1",
-      "author": [
-        "Jody Houser"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=9vU1EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
-      "publishedDate": "2021-09-14",
-      "infoLink": "https://play.google.com/store/books/details?id=9vU1EAAAQBAJ&source=gbs_api",
-      "statusId": 2,
-      "id": 16
-    },
-    {
-      "userId": 1,
       "title": "Stranger Things: Worlds Turned Upside Down",
       "author": [
         "Gina McIntyre"
@@ -148,21 +118,37 @@
       "publishedDate": "2018-10-30",
       "infoLink": "https://play.google.com/store/books/details?id=KFVeDwAAQBAJ&source=gbs_api",
       "statusId": 3,
-      "id": 23
+      "id": 25
     },
     {
       "userId": 1,
-      "title": "Stranger things. Sei",
+      "title": "Stranger Things: Suspicious Minds",
+      "author": [
+        "Gwenda Bond"
+      ],
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=evyTvQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "favorite": "",
+      "publisher": "Del Rey Books",
+      "publishedDate": "2019-02",
+      "infoLink": "http://books.google.com/books?id=evyTvQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
+      "statusId": 2,
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "title": "Stranger Things: SIX (Graphic Novel)",
       "author": [
         "Jody Houser"
       ],
       "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=39dSzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "bookCover": "http://books.google.com/books/content?id=KYiODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "favorite": "",
-      "publishedDate": "2020",
-      "infoLink": "http://books.google.com/books?id=39dSzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
-      "statusId": 3,
-      "id": 24
+      "publisher": "Dark Horse Comics",
+      "publishedDate": "2019-11-26",
+      "infoLink": "https://play.google.com/store/books/details?id=KYiODwAAQBAJ&source=gbs_api",
+      "statusId": 2,
+      "id": 28
     },
     {
       "userId": 1,
@@ -177,23 +163,36 @@
       "publishedDate": "2022-07-05",
       "infoLink": "http://books.google.com/books?id=LP0rzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
       "statusId": 3,
-      "id": 25
+      "id": 29
     },
     {
-      "title": "Stranger Things: The Other Side (Graphic Novel)",
+      "userId": 1,
+      "title": "Stranger things. Sei",
       "author": [
         "Jody Houser"
       ],
-      "bookCover": "http://books.google.com/books/content?id=wo6RDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2019-05-07",
-      "publisher": "Dark Horse Comics",
-      "infoLink": "http://books.google.com/books?id=wo6RDwAAQBAJ&dq=stranger+things&hl=&source=gbs_api",
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=39dSzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
       "favorite": "",
-      "dateComplete": "2022-8-30",
-      "dateTime": 1661834521913,
-      "statusId": 1,
+      "publishedDate": "2020",
+      "infoLink": "http://books.google.com/books?id=39dSzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
+      "statusId": 2,
+      "id": 30
+    },
+    {
       "userId": 1,
-      "id": 26
+      "title": "Stranger Things Library Edition Volume 1",
+      "author": [
+        "Jody Houser"
+      ],
+      "dateComplete": "",
+      "bookCover": "http://books.google.com/books/content?id=9vU1EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "favorite": "",
+      "publisher": "Dark Horse Comics",
+      "publishedDate": "2021-09-14",
+      "infoLink": "https://play.google.com/store/books/details?id=9vU1EAAAQBAJ&source=gbs_api",
+      "statusId": 2,
+      "id": 31
     }
   ]
 }

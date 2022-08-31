@@ -54,19 +54,20 @@ export const RandomBook = () => {
     if (buttonState === true) {
         return (
 
-            <RandomBookCard 
-            randomBooks={randomBooks}
-            setButton={setButton}
-            NYTAPIFetch={NYTAPIFetch} />
+            <RandomBookCard
+                randomBooks={randomBooks}
+                setButton={setButton}
+                NYTAPIFetch={NYTAPIFetch} />
         )
 
     } else {
         return (
-            <section className="random_prompt">
+            <section className="random_prompt"
+                style={{ marginRight: "2%" }}>
                 <h4 className="random_h4"
                 >Book Button</h4>
                 <div className="random_text"
-                    >Press this button to get a recommendation based on current New York Times Bestsellers!
+                >Press this button to get a recommendation based on current New York Times Bestsellers!
                 </div>
                 <BookButton
                     setButton={setButton}

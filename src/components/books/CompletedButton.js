@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap"
 
 
 //Button for marking a current book as complete
-export const CompletedButton = ({ current, setCurrent, setRefresh}) => {
+export const CompletedButton = ({ current, setCurrent, setRefresh }) => {
 
   //Grab current user info
   const localMybraryUser = localStorage.getItem("mybrary_user");
@@ -55,7 +55,8 @@ export const CompletedButton = ({ current, setCurrent, setRefresh}) => {
     <>
       <Button className="readButton"
         variant="secondary"
-        onClick={(clickEvent) => {handleSaveButtonClick()
+        onClick={(clickEvent) => {
+          handleSaveButtonClick()
         }}>
         Mark as Read
       </Button>

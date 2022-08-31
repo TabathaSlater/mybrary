@@ -16,7 +16,7 @@ export const CurrentBook = () => {
 
   //Get current user info
   const localMybraryUser = localStorage.getItem("mybrary_user");
-  const mybraryUserObject = JSON.parse(localMybraryUser); 
+  const mybraryUserObject = JSON.parse(localMybraryUser);
 
   //Get current books related to the current user
   const booksFetch = () => {
@@ -31,7 +31,7 @@ export const CurrentBook = () => {
       });
   }
   useEffect(() => {
-      booksFetch()
+    booksFetch()
   }, [refreshTrigger]);
 
   //conditional to show the current book if there is one, or a prompt to find a book
@@ -60,7 +60,7 @@ export const CurrentBook = () => {
             <a
               href="/search_results"
               className="link-success find_current"
-              >Find Books
+            >Find Books
             </a>
           </p>
         </Alert>

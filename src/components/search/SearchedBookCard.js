@@ -19,15 +19,15 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
           backgroundColor: "whitesmoke",
           border: "0px",
           height: "45rem",
-          width: '13%'
+          width: '14%'
         }}
       >
         <Card.Img
           top
           style={{
-            width: "75%",
-            height: "17em",
-            marginLeft: "12.5%",
+            width: "70%",
+            height: "fit-content",
+            marginLeft: "15%",
             marginTop: "6%",
           }}
           src={book?.volumeInfo?.imageLinks?.smallThumbnail}
@@ -65,12 +65,12 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             <Button
               onClick={handleShow}
               variant="warning"
-              style={{ margin: "1.5%" }}
+              style={{ margin: "1.5%", width: "60%" }}
             >More info
             </Button>
             <Button
               variant="secondary"
-              style={{ margin: "1.5%" }}
+              style={{ margin: "1.5%", width: "75%" }}
               onClick={(e) => {
                 addToWant(e, book);
               }}
@@ -78,7 +78,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             </Button>
             <Button
               id="currentBtn"
-              style={{ margin: "1.5%" }}
+              style={{ margin: "1.5%", width: "85%"}}
               onClick={(e) => {
                 addToCurrent(e, book);
               }}
@@ -119,7 +119,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             </div>
             <div
               className="mt-3">
-              {book?.searchInfo?.textSnippet}
+              {book?.searchInfo?.textSnippet.replace(/[&\/||#+;-?*<>{}]/g, "")}
             </div>
           </div>
           <Modal.Footer
