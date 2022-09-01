@@ -116,6 +116,10 @@
     margin-top: 150px;
 }
 
+.random_publishDate {
+    margin-top: 5px;
+}
+
 .random_link_info {
     display: flex;
     justify-content: center;

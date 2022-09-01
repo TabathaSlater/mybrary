@@ -19,8 +19,11 @@ export const HomePageCurrentCard = ({ current, setCurrent, setRefresh }) => {
                     <div className="author">
                         {current.author}
                     </div>
-                    <div>
-                        {current.publisher} {current.publishedDate}
+                    <div className="random_publishDate">
+                        {current.publisher}
+                    </div>
+                    <div> 
+                        {current.publishedDate}
                     </div>
                 </Card.Text>
                 <div className="currentButtons">
