@@ -27,6 +27,11 @@ export const NavBar = () => {
                     onClick={() => {
                         navigate("/search_results")
                     }}>Find Books</Nav.Link>
+                <Nav.Link className="libraries"
+                    to=""
+                    onClick={() => {
+                        navigate("/search_places")
+                    }}>Local Library</Nav.Link>
                 <Nav.Link className="logout"
                     to=""
                     onClick={() => {

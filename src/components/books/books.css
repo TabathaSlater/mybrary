@@ -24,12 +24,12 @@
 .currentBook {
     margin: 5px;
     margin-left: 11%;
-    border-right: solid 5px whitesmoke;
+    border-right: double 5px whitesmoke;
     padding-right: 6%;
 }
 
 .book_generator {
-    border-left: solid 5px whitesmoke;
+    border-left: double 5px whitesmoke;
     margin-top: 25px;
     /* margin-right: 11%; */
     padding-left: 6%;
