@@ -14,33 +14,14 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
   return (
     <>
       <Card
-        className="cardBox"
-        style={{
-          backgroundColor: "whitesmoke",
-          border: "0px",
-          height: "45rem",
-          width: '14%'
-        }}
-      >
-        <Card.Img
+        className="cardBox">
+        <Card.Img className="img_search_card"
           top
-          style={{
-            width: "70%",
-            height: "fit-content",
-            marginLeft: "15%",
-            marginTop: "6%",
-          }}
           src={book?.volumeInfo?.imageLinks?.smallThumbnail}
           alt={book?.volumeInfo?.title}
         />
         <Card.Body>
-          <h5
-            style={{
-              margin: "1.5%",
-              marginBottom: "1.5rem",
-              letterSpacing: ".75px",
-            }}
-          >
+          <h5 className="searchCard_body_header">
             {book?.volumeInfo?.title}
           </h5>
           <div>
@@ -52,16 +33,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
               {book?.volumeInfo?.publisher} {book?.volumeInfo?.publishedDate}
             </Card.Text>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              position: "absolute",
-              bottom: "0",
-              marginBottom: "15px",
-              width: "85%",
-              alignItems: "center"
-            }}>
+          <div className="cardBody_text">
             <Button
               onClick={handleShow}
               variant="warning"
@@ -78,7 +50,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             </Button>
             <Button
               id="currentBtn"
-              style={{ margin: "1.5%", width: "85%"}}
+              style={{ margin: "1.5%", width: "85%" }}
               onClick={(e) => {
                 addToCurrent(e, book);
               }}
@@ -123,12 +95,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
             </div>
           </div>
           <Modal.Footer
-            className="modal-footer"
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              backgroundColor: "#f2e9e4",
-            }}>
+            className="modal-footer modal_footer_card">
             <div>
               <Button
                 variant="secondary"
@@ -138,13 +105,7 @@ export const SearchedBookCard = ({ book, addToCurrent, addToWant }) => {
               </Button>
             </div>
             <div
-              className="left-silde"
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                flexDirection: "row",
-                marginRight: "10px",
-              }}>
+              className="left-silde left_card">
 
               <a
                 href={book?.volumeInfo?.previewLink}

@@ -14,7 +14,7 @@ export const RandomBook = () => {
 
     //All setting goes into a function with the fetch so that the data is loaded before setting/functions try to happen
     const NYTAPIFetch = () => {
-        return fetch('https://api.nytimes.com/svc/books/v3/lists/current/paperback-nonfiction.json?api-key=jdCS48E6bMXik69LVXM4h5CISqhaQHh6')
+        return fetch('https://api.nytimes.com/svc/books/v3/lists/current/e-book-nonfiction.json?api-key=jdCS48E6bMXik69LVXM4h5CISqhaQHh6')
             .then(response => response.json())
             .then((bookArray) => {
 

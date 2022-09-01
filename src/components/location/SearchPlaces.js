@@ -10,7 +10,7 @@ export const SearchPlaces = ({ handleLocation, fetchPlaces }) => {
 
       <h3 className="place_header">Find Libraries</h3>
       <div className="place_info">
-        Please enter your location with the city and state separated by a comma, and the state as an abbreviation.
+        Please enter your location with the city and state separated by a comma.
         Example: Charleston, WV
       </div>
       <Form onSubmit={fetchPlaces}>
@@ -18,7 +18,7 @@ export const SearchPlaces = ({ handleLocation, fetchPlaces }) => {
           <div className="place_inputs">
             <Form.Control
               type="search"
-              placeholder="City, State Abbreviation"
+              placeholder="City, State"
               className="searchField"
               onChange={(e) => {
                 handleLocation(e);

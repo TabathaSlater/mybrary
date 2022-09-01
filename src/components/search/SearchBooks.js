@@ -9,13 +9,7 @@ export const SearchBooks = ({ handleSearch, fetchMethod }) => {
 
   return (
     <>
-      <h4
-        style={{
-          display: "flex",
-          position: "absolute",
-          left: "0", margin: "20px",
-          marginLeft: "30px"
-        }}
+      <h4 className="search_books_header"
       >Find Books</h4>
       <div
         style={{ margin: "40px" }}>

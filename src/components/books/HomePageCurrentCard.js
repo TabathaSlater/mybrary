@@ -22,7 +22,7 @@ export const HomePageCurrentCard = ({ current, setCurrent, setRefresh }) => {
                     <div className="random_publishDate">
                         {current.publisher}
                     </div>
-                    <div> 
+                    <div>
                         {current.publishedDate}
                     </div>
                 </Card.Text>

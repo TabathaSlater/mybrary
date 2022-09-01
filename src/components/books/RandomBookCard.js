@@ -17,7 +17,7 @@ export const RandomBookCard = ({ randomBooks, setButton, NYTAPIFetch }) => {
                         {randomBooks?.volumeInfo?.authors}
                     </div>
                     <div className="random_publishDate">
-                        {randomBooks?.volumeInfo?.publisher} 
+                        {randomBooks?.volumeInfo?.publisher}
                     </div>
                     <div>
                         {randomBooks?.volumeInfo?.publishedDate}

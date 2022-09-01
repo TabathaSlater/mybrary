@@ -71,7 +71,34 @@
     margin: 10px;
     width: 17%;
     height: max-content;
+    background-color: whitesmoke;
+    border: 0px;
+    height: 45rem;
+    width: 14%;
     
+}
+
+.img_search_card {
+    width: 70%;
+    height: fit-content;
+    margin-left: 15%;
+    margin-top: 6%;
+}
+
+.searchCard_body_header {
+    margin: 1.5%;
+    margin-bottom: 1.5rem;
+    letter-spacing: .75px;
+}
+
+.cardBody_text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    width: 85%;
+    align-items: center;
 }
 
 #currentBtn {
@@ -90,4 +117,23 @@
  
 }
 
+.search_books_header {
+    display: flex;
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    margin-left: 30px;
+}
 
+.modal_footer_card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2e9e4;
+}
+
+.left_card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-right: 10px;
+}

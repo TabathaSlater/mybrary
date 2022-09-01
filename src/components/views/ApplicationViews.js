@@ -1,7 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import { LibrarySearch } from "../auth/location/LibrarySearch";
 import { Books } from "../books/Books";
 import { Library } from "../library/Library";
+import { LibrarySearch } from "../location/LibrarySearch";
 import { SearchContainer } from "../search/SearchContainer";
 
 export const ApplicationViews = () => {
