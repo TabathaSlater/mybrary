@@ -5,7 +5,7 @@ Mybrary utilizes Google Books API to return relevant information about your favo
 
 Styling utilizes a mixture of react-bootstrap and css.
 
-[Demonstration](c:/Users/tasla/Downloads/My_video.mp4)
+![Demonstration](public/My_video.gif)
 
 # Getting Started with Create React App
 
