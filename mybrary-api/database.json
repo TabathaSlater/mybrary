@@ -4,16 +4,6 @@
       "id": 1,
       "username": "Hopper",
       "password": "anyPassword"
-    },
-    {
-      "id": 2,
-      "username": "Eleven",
-      "password": "strongPassword"
-    },
-    {
-      "username": "JoyceByers",
-      "password": "aPassword",
-      "id": 3
     }
   ],
   "goals": [
@@ -32,14 +22,8 @@
     {
       "userId": 1,
       "goal": "Read 4 books this month",
-      "completed": false,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "goal": "Organize Mybrary books",
       "completed": true,
-      "id": 4
+      "id": 3
     }
   ],
   "bookStatus": [
@@ -90,37 +74,6 @@
       "id": 9
     },
     {
-      "title": "Will Byers: Secret Files (Stranger Things)",
-      "author": [
-        "Matthew J. Gilbert"
-      ],
-      "bookCover": "http://books.google.com/books/content?id=UEl0DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2019-09-24",
-      "publisher": "Random House Books for Young Readers",
-      "infoLink": "https://play.google.com/store/books/details?id=UEl0DwAAQBAJ&source=gbs_api",
-      "favorite": "",
-      "dateComplete": "2022-8-29",
-      "dateTime": 1661797297605,
-      "statusId": 1,
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "title": "Stranger Things: Worlds Turned Upside Down",
-      "author": [
-        "Gina McIntyre"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=KFVeDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Del Rey",
-      "publishedDate": "2018-10-30",
-      "infoLink": "https://play.google.com/store/books/details?id=KFVeDwAAQBAJ&source=gbs_api",
-      "statusId": 3,
-      "id": 25
-    },
-    {
       "userId": 1,
       "title": "Stranger Things: Suspicious Minds",
       "author": [
@@ -136,19 +89,35 @@
       "id": 26
     },
     {
-      "userId": 1,
       "title": "Stranger Things: SIX (Graphic Novel)",
       "author": [
         "Jody Houser"
       ],
-      "dateComplete": "",
       "bookCover": "http://books.google.com/books/content?id=KYiODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
       "publishedDate": "2019-11-26",
+      "publisher": "Dark Horse Comics",
       "infoLink": "https://play.google.com/store/books/details?id=KYiODwAAQBAJ&source=gbs_api",
-      "statusId": 2,
+      "favorite": "",
+      "dateComplete": "5.9.2022.",
+      "statusId": 1,
+      "userId": 1,
       "id": 28
+    },
+    {
+      "title": "Stranger Things: Worlds Turned Upside Down",
+      "author": [
+        "Gina McIntyre"
+      ],
+      "bookCover": "http://books.google.com/books/content?id=KFVeDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "publishedDate": "2018-10-30",
+      "publisher": "Del Rey",
+      "infoLink": "https://play.google.com/store/books/details?id=KFVeDwAAQBAJ&source=gbs_api",
+      "favorite": "",
+      "dateComplete": "2022-9-5",
+      "dateTime": 1662433535023,
+      "statusId": 1,
+      "userId": 1,
+      "id": 29
     },
     {
       "userId": 1,
@@ -163,7 +132,7 @@
       "publishedDate": "2022-07-05",
       "infoLink": "http://books.google.com/books?id=LP0rzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
       "statusId": 3,
-      "id": 29
+      "id": 30
     },
     {
       "userId": 1,
@@ -176,22 +145,7 @@
       "favorite": "",
       "publishedDate": "2020",
       "infoLink": "http://books.google.com/books?id=39dSzQEACAAJ&dq=stranger+things&hl=&source=gbs_api",
-      "statusId": 2,
-      "id": 30
-    },
-    {
-      "userId": 1,
-      "title": "Stranger Things Library Edition Volume 1",
-      "author": [
-        "Jody Houser"
-      ],
-      "dateComplete": "",
-      "bookCover": "http://books.google.com/books/content?id=9vU1EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "favorite": "",
-      "publisher": "Dark Horse Comics",
-      "publishedDate": "2021-09-14",
-      "infoLink": "https://play.google.com/store/books/details?id=9vU1EAAAQBAJ&source=gbs_api",
-      "statusId": 2,
+      "statusId": 3,
       "id": 31
     }
   ]
