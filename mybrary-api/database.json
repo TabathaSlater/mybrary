@@ -18,12 +18,6 @@
       "goal": "Check out the library",
       "completed": false,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "goal": "Read 4 books this month",
-      "completed": true,
-      "id": 3
     }
   ],
   "bookStatus": [
@@ -41,22 +35,6 @@
     }
   ],
   "books": [
-    {
-      "title": "Stranger Things: The Bully (Graphic Novel)",
-      "author": [
-        "Greg Pak"
-      ],
-      "bookCover": "http://books.google.com/books/content?id=-gflDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "publishedDate": "2020-09-01",
-      "publisher": "Dark Horse Comics",
-      "infoLink": "https://play.google.com/store/books/details?id=-gflDwAAQBAJ&source=gbs_api",
-      "favorite": "",
-      "dateComplete": "2022-8-26",
-      "dateTime": 1661539855386,
-      "statusId": 1,
-      "userId": 1,
-      "id": 5
-    },
     {
       "title": "Stranger Things: Darkness on the Edge of Town",
       "author": [

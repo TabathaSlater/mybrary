@@ -87,7 +87,7 @@ export const BookStatistics = () => {
                 >Average Books per Month: </h5>
 
                 <div className="books_read_avg">
-                    {booksReadAvg}
+                    {booksReadAvg.toFixed(2)}
                 </div>
             </div>
         </Container>
